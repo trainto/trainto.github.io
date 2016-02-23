@@ -1,0 +1,40 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .grid-vertical-center {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sns-icon {
+  width: 60px;
+  height: 60px;
+}
