@@ -1,6 +1,6 @@
 body {
   padding-top: 70px;
-  padding-bottom: 30px;
+  /*padding-bottom: 30px;*/
 }
 
 p {
@@ -37,4 +37,14 @@ p {
 .sns-icon {
   width: 60px;
   height: 60px;
+}
+
+.footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #c9c4c4;
+  /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
+  background-image: linear-gradient(to top,#3c3c3c 0,#222 100%);
 }
