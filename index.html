@@ -124,6 +124,14 @@
       <a href="https://www.instagram.com/hakjoon_sim/" target="_blank"><h4 class="text-center">Instagram</h4></a>
       <br>
       <ul class="list-inline text-center" id="instafeed-hakjoon"></ul>
+      <br><br>
+      <a href="http://hisblog.yoursun.me/"><h4 class="text-center">Recent Posts</h4></a>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h4 class="post-title" id="recentposts-title-hisblog"></h4>
+          <p class="post-content" id="recentposts-content-hisblog"></p>
+        </div>
+      </div>
       <br><hr><br>
       <div class="row grid-vertical-center">
         <div class="col-sm-4 col-sm-offset-1">
@@ -193,6 +201,17 @@
         template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" class="img-responsive img-circle" /></a></li>'
       });
     userFeed_yousun.run();
+    </script>
+
+    <!-- RecentPost -->
+    <script src="js/recentposts.js"></script>
+    <script>
+      function showRecentPosts(result) {
+        document.getElementById("recentposts-title-hisblog").innerHTML = result[0].title;
+        document.getElementById("recentposts-content-hisblog").innerHTML = result[0].content +
+          " <a href=\"" + result[0].url + "\">Read</a>";
+      }
+      getRecentPosts("http://hisblog.yoursun.me/feed.xml", 1, 200, showRecentPosts);
     </script>
 
     <!-- Why are you tring to sneak a peek? Be careful! I'm watching on you! -->
