@@ -37,6 +37,12 @@ p {
   color: #707070;
 }
 
+.post-pubDate {
+  font-size: 12px;
+  font-family: Source Sans Pro, Franklin Gothic Book, Arial, sans-serif;
+  color: #8c8c8c;
+}
+
 .post-content {
   color: #9f9f9f;
 }

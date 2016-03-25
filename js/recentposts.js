@@ -6,12 +6,18 @@ function parseRecentPosts(xml, postCount, maxContentLength) {
       getElementsByTagName("title")[0].childNodes[0].nodeValue;
     var postUrl = xmlDoc.getElementsByTagName("item")[i].
       getElementsByTagName("link")[0].childNodes[0].nodeValue;
+    var postPubDate = xmlDoc.getElementsByTagName("item")[i].
+      getElementsByTagName("pubDate")[0].childNodes[0].nodeValue;
+    postPubDate = postPubDate.slice(0, 16);
+    console.log(postPubDate);
     var postContent = jQuery(xmlDoc.getElementsByTagName("item")[i].
       getElementsByTagName("description")[0].childNodes[0].nodeValue).text().
       slice(0, maxContentLength) + ' ...';
+
     retArr[i] = {
       title: postTitle,
       url: postUrl,
+      pubDate: postPubDate,
       content: postContent
     };
   }

@@ -207,7 +207,8 @@
     <script src="js/recentposts.js"></script>
     <script>
       function showRecentPosts(result) {
-        document.getElementById("recentposts-title-hisblog").innerHTML = result[0].title;
+        document.getElementById("recentposts-title-hisblog").innerHTML = result[0].title +
+          "<span class=\"post-pubDate\">&nbsp&nbsp" + result[0].pubDate + "</span>";
         document.getElementById("recentposts-content-hisblog").innerHTML = result[0].content +
           " <a href=\"" + result[0].url + "\">Read</a>";
       }
