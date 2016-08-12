@@ -183,24 +183,26 @@
     <!-- Instafeed.js -->
     <script src="js/instafeed.min.js"></script>
     <script>
-      var userFeed_hakjoon = new Instafeed({
-        get: 'user',
-        userId: '230471966',
-        accessToken: '230471966.9273b00.4166a129fdfe4545aa42af051f41bf3f',
-        limit: '4',
-        target: 'instafeed-hakjoon',
-        template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" class="img-responsive img-circle" /></a></li>'
-      });
-    userFeed_hakjoon.run();
-    var userFeed_yousun = new Instafeed({
-        get: 'user',
-        userId: '1259981978',
-        accessToken: '1259981978.ce7ff92.bdddcd31113a432590f34355a5e9eba9',
-        limit: '4',
-        target: 'instafeed-yousun',
-        template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" class="img-responsive img-circle" /></a></li>'
-      });
-    userFeed_yousun.run();
+      (function () {
+        var userFeed_hakjoon = new Instafeed({
+          get: 'user',
+          userId: '230471966',
+          accessToken: '230471966.9273b00.4166a129fdfe4545aa42af051f41bf3f',
+          limit: '4',
+          target: 'instafeed-hakjoon',
+          template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" class="img-responsive img-circle" /></a></li>'
+        });
+        userFeed_hakjoon.run();
+        var userFeed_yousun = new Instafeed({
+          get: 'user',
+          userId: '1259981978',
+          accessToken: '1259981978.ce7ff92.bdddcd31113a432590f34355a5e9eba9',
+          limit: '4',
+          target: 'instafeed-yousun',
+          template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" class="img-responsive img-circle" /></a></li>'
+        });
+        userFeed_yousun.run();
+      }());
     </script>
 
     <!-- RecentPost -->
