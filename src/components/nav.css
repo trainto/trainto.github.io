@@ -1,0 +1,12 @@
+nav {
+  border-bottom: 2px solid #1ce492;
+  visibility: collapse;
+}
+
+nav.show {
+  visibility: visible;
+}
+
+.sns {
+  height: 24px;
+}

@@ -1,7 +1,19 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Source Code Pro', monospace;
 }
 
 button {
   font-family: Roboto, sans-serif;
+}
+
+.highlite-color {
+  color: #E31B6D;
+}
+
+.point-color {
+  color: #1ce492;
+}
+
+.font-bigger-2 {
+  font-size: 1.4rem;;
 }

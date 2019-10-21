@@ -1,8 +1,36 @@
 header {
-  background-color: #111;
+  background-image: linear-gradient(to bottom, #121212 0%, #323232 100%);
   color: white;
 }
 
-.highlite {
-  color: #E31B6D;
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem;;
+  }
+}
+
+span.typewriter {
+  border-right: .15em solid orange; /* The typwriter cursor */
+  animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.directory-color {
+  color: #8dd5df;
+}
+
+#btn-return {
+  visibility: hidden;
+}
+
+#btn-return.show {
+  visibility: visible;
+}
+
+.w-60 {
+  width: 60% !important;
 }
