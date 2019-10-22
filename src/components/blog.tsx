@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <section className="py-5">
+    <section className="py-5" id="blog">
       <div className="container">
         <div className="text-center">
           <div className="d-inline-block border-under">

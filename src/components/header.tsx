@@ -12,6 +12,17 @@ const Header = () => {
     }, 200);
   }, [typings.length]);
 
+  const handleReturnClicked = () => {
+    const aboutSection = document.getElementById("about");
+    const nav = document.getElementById("nav-top");
+    if (!aboutSection || !nav) {
+      return;
+    }
+    const navHeight = nav.getBoundingClientRect().height;
+    const aboutSectionTop = aboutSection.getBoundingClientRect().top;
+    window.scrollTo({ top: aboutSectionTop - navHeight + window.pageYOffset, left: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="min-vh-100 d-flex justify-content-center align-items-center text-center">
       <div className="flex-colum">
@@ -35,6 +46,7 @@ const Header = () => {
               src="/img/header-ic-return.png"
               alt="return"
               style={{ height: "18px" }}
+              onClick={handleReturnClicked}
             />
           </div>
         </div>

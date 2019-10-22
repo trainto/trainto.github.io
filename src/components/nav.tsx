@@ -20,13 +20,43 @@ const Nav = () => {
     };
   }, []);
 
+  let navHeight = 0;
+
+  const handleNavClicked = (id: string) => {
+    const target = document.getElementById(id);
+    if (!target) {
+      return;
+    }
+
+    const targetTop = target.getBoundingClientRect().top;
+
+    if (!navHeight) {
+      const nav = document.getElementById("nav-top");
+      if (nav) {
+        navHeight = nav.getBoundingClientRect().height;
+      }
+    }
+
+    window.scrollTo({
+      top: targetTop - navHeight + window.pageYOffset,
+      left: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top navbar-dark bg-dark ${
+      className={`navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow ${
         scrolltop ? "" : "show"
       }`}
+      id="nav-top"
     >
-      <div className="navbar-brand">Hakjoon Sim</div>
+      <div
+        className="navbar-brand cursor-pointer"
+        onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
+      >
+        Hakjoon Sim
+      </div>
       <button
         className="navbar-toggler"
         type="button"
@@ -42,15 +72,28 @@ const Nav = () => {
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <div className="nav-link">
+            <div
+              className="nav-link cursor-pointer"
+              onClick={() => handleNavClicked("about")}
+            >
               About <span className="sr-only">(current)</span>
             </div>
           </li>
           <li className="nav-item">
-            <div className="nav-link">Portfolio</div>
+            <div
+              className="nav-link cursor-pointer"
+              onClick={() => handleNavClicked("portfolio")}
+            >
+              Portfolio
+            </div>
           </li>
           <li className="nav-item">
-            <div className="nav-link">Blog</div>
+            <div
+              className="nav-link cursor-pointer"
+              onClick={() => handleNavClicked("blog")}
+            >
+              Blog
+            </div>
           </li>
         </ul>
         <div>

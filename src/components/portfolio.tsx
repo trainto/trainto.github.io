@@ -2,7 +2,7 @@ import React from "react";
 
 const Portfolio = () => {
   return (
-    <section className="py-5 bg-light-gray">
+    <section className="py-5 bg-light-gray" id="portfolio">
       <div className="container">
         <div className="text-center">
           <div className="d-inline-block border-under">

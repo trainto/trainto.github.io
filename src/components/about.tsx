@@ -5,7 +5,7 @@ const About = () => {
   const [active, setActive] = useState("Skills");
 
   return (
-    <section className="py-5">
+    <section className="py-5" id="about">
       <div className="container">
         <div className="text-center">
           <div className="d-inline-block border-under">
@@ -48,6 +48,49 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
+      <div>blah..</div>
     </section>
   );
 };
