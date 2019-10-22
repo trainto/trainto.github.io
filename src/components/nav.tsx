@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import "./nav.css";
+import React, { useState, useEffect } from 'react';
+import './nav.css';
 
 const Nav = () => {
   const [isScrollOnTop, setIsScrollOnTop] = useState(true);
-  const [currentScroll, setCurrentScroll] = useState("home");
+  const [currentScroll, setCurrentScroll] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,7 +13,7 @@ const Nav = () => {
         setIsScrollOnTop(true);
       }
 
-      const areas = document.getElementsByClassName("scroll-area");
+      const areas = document.getElementsByClassName('scroll-area');
 
       let maxPortion = 0;
       let currentOnScreen = '';
@@ -40,10 +40,10 @@ const Nav = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   });
 
@@ -58,7 +58,7 @@ const Nav = () => {
     const targetTop = target.getBoundingClientRect().top;
 
     if (!navHeight) {
-      const nav = document.getElementById("nav-top");
+      const nav = document.getElementById('nav-top');
       if (nav) {
         navHeight = nav.getBoundingClientRect().height;
       }
@@ -67,20 +67,20 @@ const Nav = () => {
     window.scrollTo({
       top: targetTop - navHeight + window.pageYOffset,
       left: 0,
-      behavior: "smooth"
+      behavior: 'smooth'
     });
   };
 
   return (
     <nav
       className={`navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow ${
-        isScrollOnTop ? "" : "show"
+        isScrollOnTop ? '' : 'show'
       }`}
       id="nav-top"
     >
       <div
         className="navbar-brand cursor-pointer"
-        onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
+        onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
       >
         Hakjoon Sim
       </div>
@@ -99,33 +99,33 @@ const Nav = () => {
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li
-            className={`nav-item ${currentScroll === "about" ? "active" : ""}`}
+            className={`nav-item ${currentScroll === 'about' ? 'active' : ''}`}
           >
             <div
               className="nav-link cursor-pointer"
-              onClick={() => handleNavClicked("about")}
+              onClick={() => handleNavClicked('about')}
             >
               About
             </div>
           </li>
           <li
             className={`nav-item ${
-              currentScroll === "portfolio" ? "active" : ""
+              currentScroll === 'portfolio' ? 'active' : ''
             }`}
           >
             <div
               className="nav-link cursor-pointer"
-              onClick={() => handleNavClicked("portfolio")}
+              onClick={() => handleNavClicked('portfolio')}
             >
               Portfolio
             </div>
           </li>
           <li
-            className={`nav-item ${currentScroll === "blog" ? "active" : ""}`}
+            className={`nav-item ${currentScroll === 'blog' ? 'active' : ''}`}
           >
             <div
               className="nav-link cursor-pointer"
-              onClick={() => handleNavClicked("blog")}
+              onClick={() => handleNavClicked('blog')}
             >
               Blog
             </div>
