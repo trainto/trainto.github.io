@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
 
-const command = "cat .profile";
+const command = "cd .profile";
 
 const Header = () => {
   const [typings, setTypings] = useState("");
@@ -24,7 +24,7 @@ const Header = () => {
   };
 
   return (
-    <header className="min-vh-100 d-flex justify-content-center align-items-center text-center">
+    <header className="min-vh-100 d-flex justify-content-center align-items-center text-center scroll-area" id="home">
       <div className="flex-colum">
         <h1>
           Hello, I&apos;m <span className="highlite-color">Hakjoon Sim.</span>

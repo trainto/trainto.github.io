@@ -2,23 +2,50 @@ import React, { useState, useEffect } from "react";
 import "./nav.css";
 
 const Nav = () => {
-  const [scrolltop, setScrollTop] = useState(true);
-
-  const handleScroll = () => {
-    if (window.pageYOffset > 50) {
-      setScrollTop(false);
-    } else {
-      setScrollTop(true);
-    }
-  };
+  const [isScrollOnTop, setIsScrollOnTop] = useState(true);
+  const [currentScroll, setCurrentScroll] = useState("home");
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 50) {
+        setIsScrollOnTop(false);
+      } else {
+        setIsScrollOnTop(true);
+      }
+
+      const areas = document.getElementsByClassName("scroll-area");
+
+      let maxPortion = 0;
+      let currentOnScreen = '';
+      for (let i = 0; i < areas.length; i += 1) {
+        const area = areas.item(i);
+        if (!area) {
+          continue;
+        }
+
+        const rect = area.getBoundingClientRect();
+        const portion = rect.height - Math.abs(rect.top);
+        if (portion <= 0) {
+          continue;
+        }
+
+        if (portion > maxPortion) {
+          maxPortion = portion;
+          currentOnScreen = area.id;
+        }
+      }
+
+      if (currentOnScreen !== currentScroll) {
+        setCurrentScroll(currentOnScreen);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   let navHeight = 0;
 
@@ -47,7 +74,7 @@ const Nav = () => {
   return (
     <nav
       className={`navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow ${
-        scrolltop ? "" : "show"
+        isScrollOnTop ? "" : "show"
       }`}
       id="nav-top"
     >
@@ -71,15 +98,21 @@ const Nav = () => {
 
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
+          <li
+            className={`nav-item ${currentScroll === "about" ? "active" : ""}`}
+          >
             <div
               className="nav-link cursor-pointer"
               onClick={() => handleNavClicked("about")}
             >
-              About <span className="sr-only">(current)</span>
+              About
             </div>
           </li>
-          <li className="nav-item">
+          <li
+            className={`nav-item ${
+              currentScroll === "portfolio" ? "active" : ""
+            }`}
+          >
             <div
               className="nav-link cursor-pointer"
               onClick={() => handleNavClicked("portfolio")}
@@ -87,7 +120,9 @@ const Nav = () => {
               Portfolio
             </div>
           </li>
-          <li className="nav-item">
+          <li
+            className={`nav-item ${currentScroll === "blog" ? "active" : ""}`}
+          >
             <div
               className="nav-link cursor-pointer"
               onClick={() => handleNavClicked("blog")}
