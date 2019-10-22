@@ -1,5 +1,18 @@
 import React, { useState } from 'react';
+import Education from './education';
+import Papers from './papers';
 import './about.css';
+
+const renderSwitcher = (active: string) => {
+  switch (active) {
+    case 'Education':
+      return <Education />
+    case 'Papers':
+      return <Papers />
+    default:
+      break;
+  }
+};
 
 const About = () => {
   const [active, setActive] = useState('Skills');
@@ -33,7 +46,7 @@ const About = () => {
         <div className="row mt-5">
           <div
             className={`col-12 col-md-3 text-center cursor-pointer ${
-              active === 'Skills' ? 'font-weight-bold' : 'text-muted'
+              active === 'Skills' ? 'font-weight-bold active' : 'text-muted'
             }`}
             onClick={() => setActive('Skills')}
           >
@@ -41,7 +54,7 @@ const About = () => {
           </div>
           <div
             className={`col-12 col-md-3 text-center cursor-pointer ${
-              active === 'Careers' ? 'font-weight-bold' : 'text-muted'
+              active === 'Careers' ? 'font-weight-bold active' : 'text-muted'
             }`}
             onClick={() => setActive('Careers')}
           >
@@ -49,7 +62,7 @@ const About = () => {
           </div>
           <div
             className={`col-12 col-md-3 text-center cursor-pointer ${
-              active === 'Education' ? 'font-weight-bold' : 'text-muted'
+              active === 'Education' ? 'font-weight-bold active' : 'text-muted'
             }`}
             onClick={() => setActive('Education')}
           >
@@ -57,57 +70,18 @@ const About = () => {
           </div>
           <div
             className={`col-12 col-md-3 text-center cursor-pointer ${
-              active === 'Papers' ? 'font-weight-bold' : 'text-muted'
+              active === 'Papers' ? 'font-weight-bold active' : 'text-muted'
             }`}
             onClick={() => setActive('Papers')}
           >
             Papers
           </div>
         </div>
+
+        <hr className="mb-5" />
+
+        {renderSwitcher(active)}
       </div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
-      <div>blah..</div>
     </section>
   );
 };

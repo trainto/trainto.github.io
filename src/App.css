@@ -14,8 +14,12 @@ button {
   color: #1ce492;
 }
 
+.font-bigger-1 {
+  font-size: 1.2rem;
+}
+
 .font-bigger-2 {
-  font-size: 1.4rem;;
+  font-size: 1.4rem;
 }
 
 .cursor-pointer:hover {
