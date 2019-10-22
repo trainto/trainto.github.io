@@ -17,3 +17,15 @@ button {
 .font-bigger-2 {
   font-size: 1.4rem;;
 }
+
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
+div.border-under {
+  border-bottom: 3px solid #e31b6d;
+}
+
+section.bg-light-gray {
+  background-color: #f6f6f6;
+}
