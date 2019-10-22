@@ -9,6 +9,51 @@ header {
   }
 }
 
+.terminal {
+  border: 1px solid #535353;
+  box-shadow: 0 14px 50px 0 rgba(0,0,0,0.38), 0 2px 10px 0 rgba(0,0,0,0.48);
+  border-radius: 7px;
+}
+
+.terminal-header {
+  height: 2rem;
+  line-height: 2rem;
+  text-align: left;
+  background-color: #212121;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.terminal-button-group {
+  display: inline-block;
+  margin: 0 11px;
+}
+
+.terminal-button {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-button.red {
+  background-color: #ff5c5c;
+}
+
+.terminal-button.yellow {
+  background-color: #ffbd4c;
+}
+
+.terminal-button.green {
+  background-color: #00ca56;
+}
+
+.terminal-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 span.typewriter {
   border-right: .15em solid orange; /* The typwriter cursor */
   animation: blink-caret .75s step-end infinite;
