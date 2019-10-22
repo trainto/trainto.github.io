@@ -13,6 +13,21 @@ const About = () => {
               About
             </h2>
           </div>
+          <div className="mt-3 mw-50">
+            I am the Front-End developer for{' '}
+            <a
+              href="https://skplanet.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SK planet
+            </a>{' '}
+            in Seongnam, Korea.
+            <br />
+            I also worked more than 5 years as Android developer.
+            <br />
+            I love programming, traveling and doing nothing. :)
+          </div>
         </div>
 
         <div className="row mt-5">
