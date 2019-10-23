@@ -7,11 +7,11 @@ import './about.css';
 const renderSwitcher = (active: string) => {
   switch (active) {
     case 'Careers':
-      return <Careers />
+      return <Careers />;
     case 'Education':
-      return <Education />
+      return <Education />;
     case 'Papers':
-      return <Papers />
+      return <Papers />;
     default:
       break;
   }
@@ -29,20 +29,20 @@ const About = () => {
               About
             </h2>
           </div>
-          <div className="mt-3 mw-50">
-            I am the Front-End developer for{' '}
-            <a
-              href="https://skplanet.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              SK planet
-            </a>{' '}
-            in Seongnam, Korea.
-            <br />
-            I also worked more than 5 years as Android developer.
-            <br />
-            I love programming, traveling and doing nothing. :)
+          <div className="row">
+            <div className="col-12 col-md-4 mt-3 text-center">
+              <img src="/img/joon.jpg" className="img-fluid rounded-circle" alt="Hakjoon" style={{ maxWidth: '60%' }} />
+            </div>
+            <div className="col-12 col-md-8 mt-3 text-left align-self-center">
+              I am the Front-End developer for{' '}
+              <a href="https://skplanet.com" target="_blank" rel="noopener noreferrer">
+                SK planet
+              </a>{' '}
+              in Seongnam, Korea.
+              <br />
+              I also worked more than 5 years as Android developer.
+              <br />I love programming, traveling and doing nothing. :)
+            </div>
           </div>
         </div>
 
