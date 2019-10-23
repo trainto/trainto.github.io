@@ -7,7 +7,7 @@ import Header from './components/header';
 import About from './components/about';
 import Portfolio from './components/portfolio';
 import Blog from './components/blog';
-import Footer from './components/footer'
+import Footer from './components/footer';
 
 const App: React.FC = () => {
   smoothcroll.polyfill();

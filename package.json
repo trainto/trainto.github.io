@@ -22,7 +22,19 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": ["react-app"],
+    "rules": {
+        "quotes": ["warn", "single"],
+        "semi": ["warn", "always"],
+        "indent": ["warn", 2]
+    },
+    "overrides": [
+      {
+        "files": ["**/*.ts?(x)"],
+        "rules": {
+        }
+      }
+    ]
   },
   "browserslist": {
     "production": [

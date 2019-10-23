@@ -6,14 +6,14 @@ import './about.css';
 
 const renderSwitcher = (active: string) => {
   switch (active) {
-    case 'Careers':
-      return <Careers />;
-    case 'Education':
-      return <Education />;
-    case 'Papers':
-      return <Papers />;
-    default:
-      break;
+  case 'Careers':
+    return <Careers />;
+  case 'Education':
+    return <Education />;
+  case 'Papers':
+    return <Papers />;
+  default:
+    break;
   }
 };
 

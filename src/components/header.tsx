@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import "./header.css";
+import React, { useState, useEffect } from 'react';
+import './header.css';
 
-const command = "cd .profile";
+const command = 'cd .profile';
 
 const Header = () => {
-  const [typings, setTypings] = useState("");
+  const [typings, setTypings] = useState('');
 
   useEffect(() => {
     setTimeout(() => {
@@ -13,8 +13,8 @@ const Header = () => {
   }, [typings.length]);
 
   const handleReturnClicked = () => {
-    const aboutSection = document.getElementById("about");
-    const nav = document.getElementById("nav-top");
+    const aboutSection = document.getElementById('about');
+    const nav = document.getElementById('nav-top');
     if (!aboutSection || !nav) {
       return;
     }
@@ -23,7 +23,7 @@ const Header = () => {
     window.scrollTo({
       top: aboutSectionTop - navHeight + window.pageYOffset,
       left: 0,
-      behavior: "smooth"
+      behavior: 'smooth'
     });
   };
 
@@ -41,8 +41,7 @@ const Header = () => {
         <div className="h-100 d-flex justify-content-center align-items-center text-center">
           <div className="flex-colum">
             <h1>
-              Hello, I&apos;m{" "}
-              <span className="highlite-color">Hakjoon Sim.</span>
+              Hello, I&apos;m <span className="highlite-color">Hakjoon Sim.</span>
               <br />
               I'm a developer.
             </h1>
@@ -55,12 +54,10 @@ const Header = () => {
                 <input
                   id="btn-return"
                   type="image"
-                  className={`ml-2 ${
-                    command.length === typings.length ? "show" : ""
-                  }`}
+                  className={`ml-2 ${command.length === typings.length ? 'show' : ''}`}
                   src="/img/header-ic-return.png"
                   alt="return"
-                  style={{ height: "18px" }}
+                  style={{ height: '18px' }}
                   onClick={handleReturnClicked}
                 />
               </div>
