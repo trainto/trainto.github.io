@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import Careers from './careers';
 import Education from './education';
 import Papers from './papers';
 import './about.css';
 
 const renderSwitcher = (active: string) => {
   switch (active) {
+    case 'Careers':
+      return <Careers />
     case 'Education':
       return <Education />
     case 'Papers':
