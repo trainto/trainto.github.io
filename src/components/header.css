@@ -26,12 +26,13 @@ header {
 .terminal-button-group {
   display: inline-block;
   margin: 0 11px;
+  z-index: 1030;
 }
 
 .terminal-button {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
 }
 

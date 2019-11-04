@@ -12,6 +12,21 @@ const Header = () => {
     }, 200);
   }, [typings.length]);
 
+  const handleRequestFullScreen = () => {
+    const element: any = document.documentElement;
+    const request =
+      element.requestFullscreen ||
+      element.webkitRequestFullscreen ||
+      element.mozRequestFullScreen ||
+      element.msRequestFullscreen;
+
+    if (request) {
+      request.call(element);
+    } else {
+      alert('Your browser does not support full screen mode.');
+    }
+  };
+
   const handleReturnClicked = () => {
     const aboutSection = document.getElementById('about');
     const nav = document.getElementById('nav-top');
@@ -34,7 +49,7 @@ const Header = () => {
           <div className="terminal-button-group">
             <span className="terminal-button red" />
             <span className="terminal-button yellow ml-1" />
-            <span className="terminal-button green ml-1" />
+            <span className="terminal-button green ml-1 cursor-pointer" onClick={handleRequestFullScreen} />
           </div>
           <div className="terminal-title text-center">trainto@trainto-MBP: ~ (zsh)</div>
         </div>
