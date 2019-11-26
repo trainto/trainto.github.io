@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "24.0.19",
-    "@types/node": "12.11.1",
-    "@types/react": "16.9.9",
-    "@types/react-dom": "16.9.2",
+    "@types/jest": "24.0.23",
+    "@types/node": "12.12.14",
+    "@types/react": "16.9.13",
+    "@types/react-dom": "16.9.4",
     "@types/smoothscroll-polyfill": "^0.3.1",
     "bootstrap": "^4.3.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-scripts": "3.2.0",
     "smoothscroll-polyfill": "^0.4.4",
-    "typescript": "3.6.4"
+    "typescript": "3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,17 +22,29 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": ["react-app"],
+    "extends": [
+      "react-app"
+    ],
     "rules": {
-        "quotes": ["warn", "single"],
-        "semi": ["warn", "always"],
-        "indent": ["warn", 2]
+      "quotes": [
+        "warn",
+        "single"
+      ],
+      "semi": [
+        "warn",
+        "always"
+      ],
+      "indent": [
+        "warn",
+        2
+      ]
     },
     "overrides": [
       {
-        "files": ["**/*.ts?(x)"],
-        "rules": {
-        }
+        "files": [
+          "**/*.ts?(x)"
+        ],
+        "rules": {}
       }
     ]
   },
