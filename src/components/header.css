@@ -30,7 +30,7 @@ header {
 .terminal-button-group {
   display: inline-block;
   margin: 0 11px;
-  z-index: 1030;
+  z-index: 1020;
 }
 
 .terminal-button {

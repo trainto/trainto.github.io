@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Skills from './skills';
 import Careers from './careers';
 import Education from './education';
 import Papers from './papers';
@@ -6,6 +7,8 @@ import './about.css';
 
 const renderSwitcher = (active: string) => {
   switch (active) {
+  case 'Skills':
+    return <Skills />;
   case 'Careers':
     return <Careers />;
   case 'Education':
@@ -31,7 +34,12 @@ const About = () => {
           </div>
           <div className="row">
             <div className="col-12 col-md-4 mt-3 text-center">
-              <img src="/img/joon.jpg" className="img-fluid rounded-circle" alt="Hakjoon" style={{ maxWidth: '60%' }} />
+              <img
+                src="/img/joon.jpg"
+                className="img-fluid rounded-circle"
+                alt="Hakjoon"
+                style={{ maxWidth: '60%' }}
+              />
             </div>
             <div className="col-12 col-md-8 mt-3 text-left align-self-center">
               I am the Front-End developer for{' '}
