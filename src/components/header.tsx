@@ -51,7 +51,7 @@ const Header = () => {
 
   return (
     <header className="vh-100 p-2 d-flex align-items-center justify-content-center" id="home">
-      <div className="terminal">
+      <div className="terminal shadow">
         <div className="terminal-header d-flex">
           <div className="terminal-button-group">
             <span className="terminal-button red" />
