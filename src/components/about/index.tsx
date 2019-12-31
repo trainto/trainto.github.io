@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Skills from './skills';
 import Careers from './careers';
 import Education from './education';
 import Papers from './papers';
@@ -7,8 +6,6 @@ import './about.css';
 
 const renderSwitcher = (active: string) => {
   switch (active) {
-  case 'Skills':
-    return <Skills />;
   case 'Careers':
     return <Careers />;
   case 'Education':
@@ -21,7 +18,7 @@ const renderSwitcher = (active: string) => {
 };
 
 const About = () => {
-  const [active, setActive] = useState('Skills');
+  const [active, setActive] = useState('Careers');
 
   return (
     <section className="py-5 scroll-area" id="about">
@@ -54,15 +51,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="row mt-5">
-          <div
-            className={`col-12 col-md-3 text-center cursor-pointer ${
-              active === 'Skills' ? 'font-weight-bold active' : 'text-muted'
-            }`}
-            onClick={() => setActive('Skills')}
-          >
-            Skills
-          </div>
+        <div className="row mt-5 justify-content-center">
           <div
             className={`col-12 col-md-3 text-center cursor-pointer ${
               active === 'Careers' ? 'font-weight-bold active' : 'text-muted'
