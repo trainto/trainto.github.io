@@ -4,6 +4,7 @@ import './header.css';
 const command = 'cd .profile';
 
 const Header = () => {
+  const [time, setTime] = useState('');
   const [typings, setTypings] = useState('');
 
   useEffect(() => {
@@ -12,6 +13,11 @@ const Header = () => {
     }, 200);
   }, [typings.length]);
 
+  useEffect(() => {
+    setTime(new Date().toString());
+  }, []);
+
+  /*
   const handleRequestFullScreen = () => {
     const element: any = document.documentElement;
     const request =
@@ -26,6 +32,7 @@ const Header = () => {
       alert('Your browser does not support full screen mode.');
     }
   };
+  */
 
   const handleReturnClicked = () => {
     const aboutSection = document.getElementById('about');
@@ -43,41 +50,47 @@ const Header = () => {
   };
 
   return (
-    <header className="vh-100 p-2 scroll-area" id="home">
-      <div className="h-100 terminal">
+    <header className="vh-100 p-2 d-flex align-items-center justify-content-center" id="home">
+      <div className="terminal">
         <div className="terminal-header d-flex">
           <div className="terminal-button-group">
             <span className="terminal-button red" />
             <span className="terminal-button yellow ml-1" />
-            <span className="terminal-button green ml-1 cursor-pointer" onClick={handleRequestFullScreen} />
+            <span className="terminal-button green ml-1" />
           </div>
-          <div className="terminal-title text-center">trainto@trainto-MBP: ~ (zsh)</div>
+          <div className="terminal-title text-center">trainto: ~ (zsh)</div>
         </div>
-        <div className="h-100 d-flex justify-content-center align-items-center text-center">
-          <div className="flex-colum">
-            <h1>
-              Hello, I&apos;m <span className="highlite-color">Hakjoon Sim.</span>
-              <br />
-              I'm a developer.
-            </h1>
-            <div className="d-inline-block w-60 mt-3 text-left">
-              <div className="d-flex align-items-center">
-                <span className="directory-color font-bigger-2">~</span>
-                <span className="point-color font-bigger-2">&raquo;</span>
-                <span className="typewriter">&nbsp;{typings}</span>
+        <div className="text-center py-5">
+          <h1>
+            Hello, I&apos;m <span className="highlite-color">Hakjoon Sim.</span>
+            <br />
+            I'm a developer.
+          </h1>
+        </div>
+        <div className="mt-4 ml-3">
+          <div>Welcome to trainto.me</div>
+          <br />
 
-                <input
-                  id="btn-return"
-                  type="image"
-                  className={`ml-2 ${command.length === typings.length ? 'show' : ''}`}
-                  src="/img/header-ic-return.png"
-                  alt="return"
-                  style={{ height: '18px' }}
-                  onClick={handleReturnClicked}
-                />
-              </div>
-            </div>
-          </div>
+          <div className="text-truncate"> * His blog: https://hisblog.yoursun.me</div>
+          <div className="text-truncate"> * His email: trainto (at) gmail.com</div>
+          <br />
+
+          <div className="text-truncate mt-3">Login: {time}</div>
+          <br />
+
+          <span className="directory-color font-bigger-2">~</span>
+          <span className="point-color font-bigger-2">&raquo;</span>
+          <span className="typewriter">&nbsp;{typings}</span>
+
+          <input
+            id="btn-return"
+            type="image"
+            className={`align-middle ml-2 ${command.length === typings.length ? 'show' : ''}`}
+            src="/img/header-ic-return.png"
+            alt="return"
+            style={{ height: '18px' }}
+            onClick={handleReturnClicked}
+          />
         </div>
       </div>
     </header>
