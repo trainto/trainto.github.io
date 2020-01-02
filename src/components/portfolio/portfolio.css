@@ -1,0 +1,20 @@
+#portfolio ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#portfolio li {
+  padding-left: 1em;
+  text-indent: -0.7em;
+}
+
+#portfolio li::before {
+  content: '•';
+  padding-right: 0.5rem;
+  color: #1ce492;
+}
+
+#portfolio .active {
+  border: 1px dashed #1ce492;
+}

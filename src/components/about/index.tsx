@@ -29,6 +29,7 @@ const About = () => {
               About
             </h2>
           </div>
+
           <div className="row">
             <div className="col-12 col-md-4 mt-3 text-center">
               <img
