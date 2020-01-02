@@ -34,7 +34,7 @@ const About = () => {
             <div className="col-12 col-md-4 mt-3 text-center">
               <img
                 src="/img/joon.jpg"
-                className="img-fluid rounded-circle"
+                className="img-fluid rounded-circle shadow"
                 alt="Hakjoon"
                 style={{ maxWidth: '60%' }}
               />

@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
+import FullStack from './full-stack';
 import './portfolio.css';
 
 const renderSwitcher = (active: string) => {
   switch (active) {
+  case 'Full-Stack':
+    return <FullStack />;
+  default:
+    return null;
   }
 };
 
@@ -47,7 +52,7 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <hr className="mb-5" />
+        <hr />
 
         {renderSwitcher(active)}
       </div>
