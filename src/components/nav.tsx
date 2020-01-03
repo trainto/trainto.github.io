@@ -73,9 +73,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow ${
-        isScrollOnTop ? '' : 'show'
-      }`}
+      className={`navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow ${isScrollOnTop ? '' : 'show'}`}
       id="nav-top"
     >
       <div
@@ -98,77 +96,36 @@ const Nav = () => {
 
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
-          <li
-            className={`nav-item ${currentScroll === 'about' ? 'active' : ''}`}
-          >
-            <div
-              className="nav-link cursor-pointer"
-              onClick={() => handleNavClicked('about')}
-            >
+          <li className={`nav-item ${currentScroll === 'about' ? 'active' : ''}`}>
+            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('about')}>
               About
             </div>
           </li>
-          <li
-            className={`nav-item ${
-              currentScroll === 'portfolio' ? 'active' : ''
-            }`}
-          >
-            <div
-              className="nav-link cursor-pointer"
-              onClick={() => handleNavClicked('portfolio')}
-            >
+          <li className={`nav-item ${currentScroll === 'portfolio' ? 'active' : ''}`}>
+            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('portfolio')}>
               Portfolio
             </div>
           </li>
-          <li
-            className={`nav-item ${currentScroll === 'blog' ? 'active' : ''}`}
-          >
-            <div
-              className="nav-link cursor-pointer"
-              onClick={() => handleNavClicked('blog')}
-            >
+          <li className={`nav-item ${currentScroll === 'blog' ? 'active' : ''}`}>
+            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('blog')}>
               Blog
             </div>
           </li>
         </ul>
         <div>
-          <a
-            href="https://instagram.com/hakjoon_sim"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://instagram.com/hakjoon_sim" target="_blank" rel="noopener noreferrer">
             <img className="sns" src="/img/instagram.png" alt="instagram" />
           </a>
-          <a
-            className="ml-1"
-            href="https://facebook.com/hakjoon.sim"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="ml-1" href="https://facebook.com/hakjoon.sim" target="_blank" rel="noopener noreferrer">
             <img className="sns" src="/img/facebook.png" alt="instagram" />
           </a>
-          <a
-            className="ml-1"
-            href="https://twitter.com/trainto"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="ml-1" href="https://twitter.com/trainto" target="_blank" rel="noopener noreferrer">
             <img className="sns" src="/img/twitter.png" alt="instagram" />
           </a>
-          <a
-            className="ml-1"
-            href="https://linkedin.com/in/hakjoon-sim/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="ml-1" href="https://linkedin.com/in/hakjoon-sim/" target="_blank" rel="noopener noreferrer">
             <img className="sns" src="/img/linkedin.png" alt="instagram" />
           </a>
-          <a
-            className="ml-1"
-            href="https://github.com/trainto"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="ml-1" href="https://github.com/trainto" target="_blank" rel="noopener noreferrer">
             <img className="sns" src="/img/github.png" alt="instagram" />
           </a>
         </div>

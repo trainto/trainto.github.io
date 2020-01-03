@@ -53,8 +53,7 @@ const Blog = () => {
               </a>
               <br />
               <span className="ml-2 text-muted">
-                Journal of Korean Institute of Intelligent Systems, 2010, 2nd
-                author
+                Journal of Korean Institute of Intelligent Systems, 2010, 2nd author
               </span>
             </li>
           ))}

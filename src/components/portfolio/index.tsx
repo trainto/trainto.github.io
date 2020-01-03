@@ -4,10 +4,10 @@ import './portfolio.css';
 
 const renderSwitcher = (active: string) => {
   switch (active) {
-  case 'Full-Stack':
-    return <FullStack />;
-  default:
-    return null;
+    case 'Full-Stack':
+      return <FullStack />;
+    default:
+      return null;
   }
 };
 
