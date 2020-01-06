@@ -72,8 +72,8 @@ const Header = () => {
           <br />
 
           <div className="text-truncate"> * Source: &nbsp;&nbsp;&nbsp;https://github.com/trainto/trainto.github.io</div>
-          <div className="text-truncate"> * His blog: &nbsp;https://hisblog.yoursun.me</div>
-          <div className="text-truncate"> * His email: trainto (at) gmail.com</div>
+          <div className="text-truncate"> * Blog: &nbsp;https://hisblog.yoursun.me</div>
+          <div className="text-truncate"> * Email: trainto (at) gmail.com</div>
           <br />
 
           <div className="text-truncate mt-3">Login: {time}</div>
