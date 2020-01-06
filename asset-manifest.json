@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/trainto.github.io/static/css/main.97d80e4e.chunk.css",
+    "main.js": "/trainto.github.io/static/js/main.0257f734.chunk.js",
+    "main.js.map": "/trainto.github.io/static/js/main.0257f734.chunk.js.map",
+    "runtime-main.js": "/trainto.github.io/static/js/runtime-main.a08aaa9d.js",
+    "runtime-main.js.map": "/trainto.github.io/static/js/runtime-main.a08aaa9d.js.map",
+    "static/css/2.64a99b10.chunk.css": "/trainto.github.io/static/css/2.64a99b10.chunk.css",
+    "static/js/2.11341bf8.chunk.js": "/trainto.github.io/static/js/2.11341bf8.chunk.js",
+    "static/js/2.11341bf8.chunk.js.map": "/trainto.github.io/static/js/2.11341bf8.chunk.js.map",
+    "index.html": "/trainto.github.io/index.html",
+    "precache-manifest.235f7493a69f102ab4dbdb66f67060ea.js": "/trainto.github.io/precache-manifest.235f7493a69f102ab4dbdb66f67060ea.js",
+    "service-worker.js": "/trainto.github.io/service-worker.js",
+    "static/css/2.64a99b10.chunk.css.map": "/trainto.github.io/static/css/2.64a99b10.chunk.css.map",
+    "static/css/main.97d80e4e.chunk.css.map": "/trainto.github.io/static/css/main.97d80e4e.chunk.css.map",
+    "static/js/2.11341bf8.chunk.js.LICENSE": "/trainto.github.io/static/js/2.11341bf8.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a08aaa9d.js",
+    "static/css/2.64a99b10.chunk.css",
+    "static/js/2.11341bf8.chunk.js",
+    "static/css/main.97d80e4e.chunk.css",
+    "static/js/main.0257f734.chunk.js"
+  ]
+}
