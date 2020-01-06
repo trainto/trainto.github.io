@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { useSpring, animated } from 'react-spring';
 import './blog.css';
 
 const BLOG_HOST = 'https://hisblog.yoursun.me/';
@@ -11,6 +12,32 @@ interface IPost {
 
 const Blog = () => {
   const [posts, setPosts] = useState<IPost[]>([]);
+  const [onScreen, setOnScreen] = useState(false);
+
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (onScreen) {
+      return;
+    }
+
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const top = sectionRef.current.getBoundingClientRect().top;
+        if (top < window.innerHeight * 0.7 && !onScreen) {
+          setOnScreen(true);
+        }
+      }
+    };
+
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [onScreen]);
 
   // Fetch blog main html and parse recent posts
   useEffect(() => {
@@ -54,27 +81,41 @@ const Blog = () => {
     fetchRecenPosts();
   }, []);
 
+  const h2AniProps = useSpring({
+    transform: onScreen ? 'rotate(360deg)' : 'rotate(0deg)',
+    opacity: onScreen ? 1 : 0,
+    from: { transform: 'rotate(0deg)' }
+  });
+
+  const contentAniProps = useSpring({
+    transform: onScreen ? 'translateY(0%)' : 'translateY(50%)',
+    opacity: onScreen ? 1 : 0,
+    from: { transform: 'translateY(50%)' }
+  });
+
   return (
-    <section className="py-5 scroll-area" id="blog">
+    <section ref={sectionRef} className="py-5 scroll-area" id="blog">
       <div className="container">
         <div className="text-center">
-          <div className="d-inline-block border-under">
+          <animated.div className="d-inline-block border-under" style={h2AniProps}>
             <h2 className="text-center font-weight-bold" id="h2-blog">
               Blog
             </h2>
-          </div>
+          </animated.div>
         </div>
 
-        <ul className="mt-5">
-          {posts.map((post, i) => (
-            <li className="mt-3" key={i}>
-              <a href={post.link} target="_blank" rel="noopener noreferrer">
-                {post.title}
-              </a>
-              <small className="ml-2 text-muted">- {post.date}</small>
-            </li>
-          ))}
-        </ul>
+        <animated.div style={contentAniProps}>
+          <ul className="mt-5">
+            {posts.map((post, i) => (
+              <li className="mt-3" key={i}>
+                <a href={post.link} target="_blank" rel="noopener noreferrer">
+                  {post.title}
+                </a>
+                <small className="ml-2 text-muted">- {post.date}</small>
+              </li>
+            ))}
+          </ul>
+        </animated.div>
       </div>
     </section>
   );
