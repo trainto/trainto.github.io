@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import FullStack from './full-stack';
+import FrontEnd from './front-end';
 import './portfolio.css';
 
 const renderSwitcher = (active: string) => {
   switch (active) {
     case 'Full-Stack':
       return <FullStack />;
+    case 'Front-End':
+      return <FrontEnd />;
     default:
       return null;
   }
