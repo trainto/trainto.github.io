@@ -105,23 +105,6 @@ const Nav = () => {
             </div>
           </li>
         </ul>
-        <div>
-          <a href="https://instagram.com/hakjoon_sim" target="_blank" rel="noopener noreferrer">
-            <img className="sns" src="/img/instagram.png" alt="instagram" />
-          </a>
-          <a className="ml-1" href="https://facebook.com/hakjoon.sim" target="_blank" rel="noopener noreferrer">
-            <img className="sns" src="/img/facebook.png" alt="instagram" />
-          </a>
-          <a className="ml-1" href="https://twitter.com/trainto" target="_blank" rel="noopener noreferrer">
-            <img className="sns" src="/img/twitter.png" alt="instagram" />
-          </a>
-          <a className="ml-1" href="https://linkedin.com/in/hakjoon-sim/" target="_blank" rel="noopener noreferrer">
-            <img className="sns" src="/img/linkedin.png" alt="instagram" />
-          </a>
-          <a className="ml-1" href="https://github.com/trainto" target="_blank" rel="noopener noreferrer">
-            <img className="sns" src="/img/github.png" alt="instagram" />
-          </a>
-        </div>
       </div>
     </nav>
   );
