@@ -49,9 +49,9 @@ const Portfolio = () => {
   }, [onScreen]);
 
   const h2AniProps = useSpring({
-    transform: onScreen ? 'translateX(0%)' : 'translateX(100%)',
-    opacity: onScreen ? 1 : 0,
-    from: { transform: 'translateX(100%)' }
+    config: { duration: 1000 },
+    from: { opacity: 0 },
+    opacity: onScreen ? 1 : 0
   });
 
   const contentAniProps = useSpring({
