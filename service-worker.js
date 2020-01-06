@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/trainto.github.io/precache-manifest.9eb9996b4d958ebb7304badc7f1b7402.js"
+  "/trainto.github.io/precache-manifest.1a5d63be24967010f4e6e46015447e08.js"
 );
 
 self.addEventListener('message', (event) => {
