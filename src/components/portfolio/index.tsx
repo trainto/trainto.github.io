@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FullStack from './full-stack';
 import FrontEnd from './front-end';
+import Android from './android';
 import './portfolio.css';
 
 const renderSwitcher = (active: string) => {
@@ -9,6 +10,8 @@ const renderSwitcher = (active: string) => {
       return <FullStack />;
     case 'Front-End':
       return <FrontEnd />;
+    case 'Android':
+      return <Android />;
     default:
       return null;
   }

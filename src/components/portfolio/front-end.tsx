@@ -5,7 +5,7 @@ const FrontEnd = () => {
     <>
       <div className="row justify-content-center">
         <div className="col-10 col-md-5 mt-3 text-center">
-          <img className="img-fluid shadow" src="/img/capstec.png" alt="Capstec" />
+          <img className="img-fluid rounded shadow" src="/img/capstec.png" alt="Capstec" />
         </div>
         <div className="col-12 col-md-6 mt-3 text-left text-center align-self-center">
           <div className="highlite-color font-bigger-1">Casptec</div>
@@ -21,7 +21,7 @@ const FrontEnd = () => {
 
       <div className="row justify-content-center mt-5">
         <div className="col-10 col-md-5 order-1 order-md-2 mt-3 text-center">
-          <img className="img-fluid shadow" src="/img/air-quality.png" alt="Air-Quality" />
+          <img className="img-fluid rounded shadow" src="/img/air-quality.png" alt="Air-Quality" />
         </div>
         <div className="col-12 col-md-6 mt-3 order-2 order-md-1 text-left text-center align-self-center">
           <div className="highlite-color font-bigger-1">Air quality solution</div>

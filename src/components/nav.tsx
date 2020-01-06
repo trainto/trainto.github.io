@@ -4,6 +4,7 @@ import './nav.css';
 const Nav = () => {
   const [isScrollOnTop, setIsScrollOnTop] = useState(true);
   const [currentScroll, setCurrentScroll] = useState('home');
+  const [collapsed, setCollapsed] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,6 +51,8 @@ const Nav = () => {
   let navHeight = 0;
 
   const handleNavClicked = (id: string) => {
+    setCollapsed(true); // close nav
+
     const target = document.getElementById(id);
     if (!target) {
       return;
@@ -83,18 +86,14 @@ const Nav = () => {
         Hakjoon Sim
       </div>
       <button
-        className="navbar-toggler"
+        className={`navbar-toggler ${collapsed ? 'collapsed' : ''}`}
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+        onClick={() => setCollapsed(!collapsed)}
       >
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse">
+      <div className={`navbar-collapse collapse ${collapsed ? '' : 'show'}`}>
         <ul className="navbar-nav mr-auto">
           <li className={`nav-item ${currentScroll === 'about' ? 'active' : ''}`}>
             <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('about')}>
