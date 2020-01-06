@@ -48,7 +48,8 @@ const Nav = () => {
     };
   });
 
-  let navHeight = 0;
+  const nav = document.getElementById('nav-top');
+  const navHeight = nav ? nav.getBoundingClientRect().height : 0;
 
   const handleNavClicked = (id: string) => {
     setCollapsed(true); // close nav
@@ -59,13 +60,6 @@ const Nav = () => {
     }
 
     const targetTop = target.getBoundingClientRect().top;
-
-    if (!navHeight) {
-      const nav = document.getElementById('nav-top');
-      if (nav) {
-        navHeight = nav.getBoundingClientRect().height;
-      }
-    }
 
     window.scrollTo({
       top: targetTop - navHeight + window.pageYOffset,
