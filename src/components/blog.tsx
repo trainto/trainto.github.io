@@ -56,7 +56,6 @@ const Blog = () => {
 
           const postArrAll = Array.from(el.getElementsByTagName('article'));
           const postArr = postArrAll.slice(0, 5);
-          console.log(postArr);
 
           const postsParsed: IPost[] = [];
           postArr.forEach(post => {

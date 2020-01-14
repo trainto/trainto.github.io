@@ -33,7 +33,8 @@
       "prettier"
     ],
     "rules": {
-      "prettier/prettier": "warn"
+      "prettier/prettier": "warn",
+      "no-console": "warn"
     }
   },
   "browserslist": {
