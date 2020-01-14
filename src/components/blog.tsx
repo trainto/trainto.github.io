@@ -67,7 +67,7 @@ const Blog = () => {
             postsParsed.push({
               title,
               date: date.split('|')[0].trim(),
-              link: link.replace(/http:\/\/.*?\//i, BLOG_HOST)
+              link: link.replace(/https?:\/\/.*?\//i, BLOG_HOST)
             });
           });
 
