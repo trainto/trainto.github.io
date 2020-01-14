@@ -68,11 +68,11 @@ const Header = () => {
           </h1>
         </div>
         <div className="mt-4 ml-3">
-          <div>Welcome to trainto.me</div>
+          <div>Welcome to iam.trainto.me</div>
           <br />
 
           <div className="text-truncate"> * Source: https://github.com/trainto/trainto.github.io</div>
-          <div className="text-truncate"> * Blog: &nbsp;&nbsp;https://blog.trainto.me</div>
+          <div className="text-truncate"> * Blog: &nbsp;&nbsp;https://trainto.me</div>
           <div className="text-truncate"> * Email: &nbsp;trainto (at) gmail.com</div>
           <br />
 

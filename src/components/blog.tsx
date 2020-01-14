@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 import './blog.css';
 
-const BLOG_HOST = 'https://blog.trainto.me/';
+const BLOG_HOST = 'https://trainto.me/';
 
 interface IPost {
   title: string;
