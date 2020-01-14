@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 import './blog.css';
 
-const BLOG_HOST = 'https://hisblog.yoursun.me/';
+const BLOG_HOST = 'https://blog.trainto.me/';
 
 interface IPost {
   title: string;
@@ -54,13 +54,15 @@ const Blog = () => {
             return;
           }
 
-          const postArr = Array.from(el.getElementsByClassName('blog-post'));
+          const postArrAll = Array.from(el.getElementsByTagName('article'));
+          const postArr = postArrAll.slice(0, 5);
+          console.log(postArr);
 
           const postsParsed: IPost[] = [];
           postArr.forEach(post => {
-            const title = (post.getElementsByClassName('blog-post-title').item(0) as HTMLElement).innerText;
-            const date = (post.getElementsByClassName('blog-post-meta').item(0) as HTMLElement).innerText;
-            const link = post.getElementsByTagName('a')[0].href;
+            const title = (post.querySelector('header h3 a') as HTMLElement).innerText;
+            const date = (post.querySelector('small') as HTMLElement).innerText;
+            const link = (post.querySelector('header h3 a') as HTMLAnchorElement).href;
 
             postsParsed.push({
               title,
