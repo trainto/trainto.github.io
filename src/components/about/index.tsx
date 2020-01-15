@@ -49,8 +49,8 @@ const About = () => {
 
   const h2AniProps = useSpring({
     opacity: onScreen ? 1 : 0,
-    transform: onScreen ? 'translateX(0%)' : 'translateX(-100%)',
-    from: { opacity: 0, transform: 'translateX(-100%)' }
+    transform: onScreen ? 'translateX(0%)' : 'translateX(-50%)',
+    from: { opacity: 0, transform: 'translateX(-50%)' }
   });
 
   const imgAniProps = useSpring({
@@ -60,9 +60,14 @@ const About = () => {
   });
 
   const descAniProps = useSpring({
+    /*
     transform: onScreen ? 'rotate(1turn)' : 'rotate(0turn)',
     opacity: onScreen ? 1 : 0,
     from: { opacity: 0, transform: 'rotate(0turn)' }
+    */
+    transform: onScreen ? 'translateY(0%)' : 'translateY(50%)',
+    opacity: onScreen ? 1 : 0,
+    from: { transform: 'translateY(50%)' }
   });
 
   const contentAniProps = useSpring({
