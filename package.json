@@ -1,7 +1,7 @@
 {
   "name": "trainto.me",
   "version": "2.0.0",
-  "homepage": "http://trainto.github.io/trainto.github.io",
+  "homepage": "http://iam.trainto.me",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.25",
