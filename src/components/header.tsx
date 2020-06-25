@@ -87,7 +87,7 @@ const Header = () => {
             id="btn-return"
             type="image"
             className={`align-middle ml-2 ${command.length === typings.length ? 'show' : ''}`}
-            src="/img/header-ic-return.png"
+            src={require('../img/header-ic-return.png')}
             alt="return"
             style={{ height: '18px' }}
             onClick={handleReturnClicked}

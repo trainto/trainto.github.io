@@ -89,7 +89,7 @@ const About = () => {
           <div className="row">
             <animated.div className="col-12 col-md-4 mt-3 text-center" style={imgAniProps}>
               <img
-                src="/img/joon.jpg"
+                src={require('../../img/joon.jpg')}
                 className="img-fluid rounded-circle shadow"
                 alt="Hakjoon"
                 style={{ maxWidth: '60%' }}

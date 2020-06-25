@@ -5,7 +5,7 @@ const Careers = () => {
     <>
       <div className="row">
         <div className="col-12 col-md-4 mt-2 text-center">
-          <img src="/img/skp_logo.png" alt="SK planet logo" style={{ width: '96px' }} />
+          <img src={require('../../img/skp_logo.png')} alt="SK planet logo" style={{ width: '96px' }} />
         </div>
         <div className="col-12 col-md-8 mt-2">
           <ul>
@@ -25,7 +25,7 @@ const Careers = () => {
 
       <div className="row mt-5">
         <div className="col-12 col-md-4 mt-2 text-center">
-          <img src="/img/lg_logo.jpg" alt="LG logo" style={{ width: '96px' }} />
+          <img src={require('../../img/lg_logo.jpg')} alt="LG logo" style={{ width: '96px' }} />
         </div>
         <div className="col-12 col-md-8 mt-2">
           <ul>
