@@ -1,0 +1,16 @@
+#contribution ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#contribution li {
+  padding-left: 1em;
+  text-indent: -0.7em;
+}
+
+#contribution li::before {
+  content: '•';
+  padding-right: 0.5rem;
+  color: #1ce492;
+}

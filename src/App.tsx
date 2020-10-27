@@ -8,6 +8,7 @@ import About from './components/about';
 import Portfolio from './components/portfolio';
 import Blog from './components/blog';
 import Footer from './components/footer';
+import Contribution from './components/contribution';
 
 const App: React.FC = () => {
   smoothcroll.polyfill();
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       <Header />
       <About />
       <Portfolio />
+      <Contribution />
       <Blog />
       <Footer />
     </div>
