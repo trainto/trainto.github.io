@@ -5,7 +5,7 @@ const Android = () => {
     <>
       <div className="row justify-content-center">
         <div className="col-10 col-md-4 mt-3 text-center">
-          <img className="img-fluid rounded shadow" src={require('../../img/flo.png')} alt="Flo" />
+          <img className="img-fluid rounded shadow" src={require('../../img/flo.jpg')} alt="Flo" />
         </div>
         <div className="col-12 col-md-6 mt-3 text-left text-center align-self-center">
           <div className="highlite-color font-bigger-1">Flo (a.k.a MusicMate)</div>
