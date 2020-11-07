@@ -3,6 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import './blog.css';
 
 const BLOG_HOST = 'https://trainto.me/';
+const LIST_COUNT_TO_SHOW = 10;
 
 interface IPost {
   title: string;
@@ -55,7 +56,7 @@ const Blog = () => {
           }
 
           const postArrAll = Array.from(el.getElementsByTagName('article'));
-          const postArr = postArrAll.slice(0, 5);
+          const postArr = postArrAll.slice(0, LIST_COUNT_TO_SHOW);
 
           const postsParsed: IPost[] = [];
           postArr.forEach(post => {
