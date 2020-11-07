@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ec4f197b02148adb04318e385c3e5774",
+    "revision": "31a9c567bfd96290a58b1dc3ad68d63c",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.8aa5a7f8.chunk.css"
   },
   {
-    "revision": "80a32d155eb812faf7f8",
+    "revision": "947cc8802545e45479a8",
     "url": "/static/css/main.9422f57b.chunk.css"
   },
   {
@@ -20,28 +20,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.0feffc57.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "80a32d155eb812faf7f8",
-    "url": "/static/js/main.65dd85dd.chunk.js"
+    "revision": "947cc8802545e45479a8",
+    "url": "/static/js/main.87d88bf6.chunk.js"
   },
   {
     "revision": "4f888bf661e149bc583a",
     "url": "/static/js/runtime-main.52464cb3.js"
   },
   {
-    "revision": "1e634d9f5a2f4fa46f100a1d720b29eb",
-    "url": "/static/media/air-quality.1e634d9f.png"
+    "revision": "49d8685bff0fdeab6a6f520952ac897e",
+    "url": "/static/media/air-quality.49d8685b.jpg"
   },
   {
-    "revision": "6b1cf709122883ec82bee194a3ba79b2",
-    "url": "/static/media/capstec.6b1cf709.png"
+    "revision": "e5e6a469801613af2b29450a7bf50fcf",
+    "url": "/static/media/capstec.e5e6a469.jpg"
   },
   {
     "revision": "d71f33f001af07fdec6782e2ac0fbfef",
     "url": "/static/media/datasoda.d71f33f0.png"
   },
   {
-    "revision": "a8a7cb439bcc2de3fbbc74eebd34af24",
-    "url": "/static/media/flo.a8a7cb43.png"
+    "revision": "197962fb81f98eb617ccab4e707f41cb",
+    "url": "/static/media/flo.197962fb.jpg"
   },
   {
     "revision": "fccf9c518e64bee341a462b9b3ab7df8",
@@ -52,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/lg_logo.d6ef6b2f.jpg"
   },
   {
-    "revision": "bb3deffe485128f6b2f66c2efac80a6b",
-    "url": "/static/media/tworld.bb3deffe.png"
+    "revision": "98c2b4fa899ba1c0c347df315a093458",
+    "url": "/static/media/tworld.98c2b4fa.jpg"
   }
 ]);
