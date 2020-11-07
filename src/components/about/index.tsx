@@ -3,7 +3,6 @@ import Careers from './careers';
 import Education from './education';
 import Papers from './papers';
 import { useSpring, animated } from 'react-spring';
-import './about.css';
 
 const renderSwitcher = (active: string) => {
   switch (active) {

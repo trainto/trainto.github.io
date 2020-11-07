@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import './contribution.css';
 
 const CONTRIBUTIONS = [
   {

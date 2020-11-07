@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import FullStack from './full-stack';
 import FrontEnd from './front-end';
 import Android from './android';
-import './portfolio.css';
 import { useSpring, animated } from 'react-spring';
 
 const renderSwitcher = (active: string) => {

@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
-import './blog.css';
 
 const BLOG_HOST = 'https://trainto.me/';
 const LIST_COUNT_TO_SHOW = 10;
