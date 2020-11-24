@@ -23,7 +23,7 @@ const CONTRIBUTIONS = [
   {
     site: 'github',
     repo: 'weskinner/symbol-gen',
-    text: 'Add keybinding for windows and linux #48',
+    text: 'Add keybinding for windows and linux',
     link: 'https://github.com/weskinner/symbol-gen/pull/48'
   }
 ];
