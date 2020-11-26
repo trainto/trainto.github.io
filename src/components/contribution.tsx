@@ -4,6 +4,12 @@ import { useSpring, animated } from 'react-spring';
 const CONTRIBUTIONS = [
   {
     site: 'github',
+    repo: 'facebook/create-react-app',
+    text: 'chore: bump versions of typescript and some @types',
+    link: 'https://github.com/facebook/create-react-app/pull/10141'
+  },
+  {
+    site: 'github',
     repo: 'transmission/transmission',
     text: 'chore(web): get rid of webpack-dev-server warning',
     link: 'https://github.com/transmission/transmission/pull/1502'
