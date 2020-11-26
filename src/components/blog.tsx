@@ -116,6 +116,12 @@ const Blog = () => {
               </li>
             ))}
           </ul>
+
+          <div className="mt-3 text-center">
+            <a href={BLOG_HOST + '2'} target="_blank" rel="noopener noreferrer" className="text-muted">
+              more...
+            </a>
+          </div>
         </animated.div>
       </div>
     </section>
