@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Careers from './careers';
 import Education from './education';
 import Papers from './papers';
 import { useSpring, animated } from 'react-spring';
+import { useScroll } from '../common/custom-hooks';
 
 const renderSwitcher = (active: string) => {
   switch (active) {
@@ -19,32 +20,8 @@ const renderSwitcher = (active: string) => {
 
 const About = () => {
   const [active, setActive] = useState('Careers');
-  const [onScreen, setOnScreen] = useState(false);
 
-  const sectionRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (onScreen) {
-      return;
-    }
-
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const top = sectionRef.current.getBoundingClientRect().top;
-        if (top < window.innerHeight * 0.7 && !onScreen) {
-          setOnScreen(true);
-        }
-      }
-    };
-
-    handleScroll();
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [onScreen]);
+  const { ref, onScreen } = useScroll<HTMLElement>();
 
   const h2AniProps = useSpring({
     opacity: onScreen ? 1 : 0,
@@ -76,7 +53,7 @@ const About = () => {
   });
 
   return (
-    <section ref={sectionRef} className="py-5 scroll-area" id="about">
+    <section ref={ref} className="py-5 scroll-area" id="about">
       <div className="container">
         <div className="text-center">
           <animated.div className="d-inline-block border-under" style={h2AniProps}>

@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { useSpring, animated } from 'react-spring';
+import { useScroll } from './common/custom-hooks';
 
 const CONTRIBUTIONS = [
   {
@@ -35,32 +36,7 @@ const CONTRIBUTIONS = [
 ];
 
 const Contribution = React.memo(() => {
-  const [onScreen, setOnScreen] = useState(false);
-
-  const sectionRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (onScreen) {
-      return;
-    }
-
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const top = sectionRef.current.getBoundingClientRect().top;
-        if (top < window.innerHeight * 0.7 && !onScreen) {
-          setOnScreen(true);
-        }
-      }
-    };
-
-    handleScroll();
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [onScreen]);
+  const { ref, onScreen } = useScroll<HTMLElement>();
 
   const h2AniProps = useSpring({
     transform: onScreen ? 'rotate(0deg)' : 'rotate(360deg)',
@@ -75,7 +51,7 @@ const Contribution = React.memo(() => {
   });
 
   return (
-    <section ref={sectionRef} className="py-5 scroll-area" id="contribution">
+    <section ref={ref} className="py-5 scroll-area" id="contribution">
       <div className="container">
         <div className="text-center">
           <animated.div className="d-inline-block border-under" style={h2AniProps}>

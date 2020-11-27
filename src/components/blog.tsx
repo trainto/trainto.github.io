@@ -1,5 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
+import { useScroll } from './common/custom-hooks';
 
 const BLOG_HOST = 'https://trainto.me/';
 const LIST_COUNT_TO_SHOW = 10;
@@ -12,32 +13,8 @@ interface IPost {
 
 const Blog = () => {
   const [posts, setPosts] = useState<IPost[]>([]);
-  const [onScreen, setOnScreen] = useState(false);
 
-  const sectionRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (onScreen) {
-      return;
-    }
-
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const top = sectionRef.current.getBoundingClientRect().top;
-        if (top < window.innerHeight * 0.7 && !onScreen) {
-          setOnScreen(true);
-        }
-      }
-    };
-
-    handleScroll();
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [onScreen]);
+  const { ref, onScreen } = useScroll<HTMLElement>();
 
   // Fetch blog main html and parse recent posts
   useEffect(() => {
@@ -95,7 +72,7 @@ const Blog = () => {
   });
 
   return (
-    <section ref={sectionRef} className="py-5 scroll-area" id="blog">
+    <section ref={ref} className="py-5 scroll-area" id="blog">
       <div className="container">
         <div className="text-center">
           <animated.div className="d-inline-block border-under" style={h2AniProps}>

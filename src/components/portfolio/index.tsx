@@ -1,8 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import FullStack from './full-stack';
 import FrontEnd from './front-end';
 import Android from './android';
 import { useSpring, animated } from 'react-spring';
+import { useScroll } from '../common/custom-hooks';
 
 const renderSwitcher = (active: string) => {
   switch (active) {
@@ -20,32 +21,7 @@ const renderSwitcher = (active: string) => {
 const Portfolio = () => {
   const [active, setActive] = useState('Full-Stack');
 
-  const [onScreen, setOnScreen] = useState(false);
-
-  const sectionRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (onScreen) {
-      return;
-    }
-
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const top = sectionRef.current.getBoundingClientRect().top;
-        if (top < window.innerHeight * 0.7 && !onScreen) {
-          setOnScreen(true);
-        }
-      }
-    };
-
-    handleScroll();
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [onScreen]);
+  const { ref, onScreen } = useScroll<HTMLElement>();
 
   const h2AniProps = useSpring({
     config: { duration: 1000 },
@@ -60,7 +36,7 @@ const Portfolio = () => {
   });
 
   return (
-    <section ref={sectionRef} className="py-5 bg-light-gray scroll-area" id="portfolio">
+    <section ref={ref} className="py-5 bg-light-gray scroll-area" id="portfolio">
       <div className="container">
         <div className="text-center">
           <animated.div className="d-inline-block border-under" style={h2AniProps}>
