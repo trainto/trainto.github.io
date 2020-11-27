@@ -4,6 +4,7 @@ import Education from './education';
 import Papers from './papers';
 import { useSpring, animated } from 'react-spring';
 import { useScroll } from '../common/custom-hooks';
+import imgJoon from '../../img/joon.jpg';
 
 const renderSwitcher = (active: string) => {
   switch (active) {
@@ -65,7 +66,7 @@ const About = () => {
           <div className="row">
             <animated.div className="col-12 col-md-4 mt-3 text-center" style={imgAniProps}>
               <img
-                src={require('../../img/joon.jpg')}
+                src={imgJoon}
                 className="img-fluid rounded-circle shadow"
                 alt="Hakjoon"
                 style={{ maxWidth: '60%' }}

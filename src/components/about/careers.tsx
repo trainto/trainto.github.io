@@ -1,11 +1,13 @@
 import React from 'react';
+import logoSKP from '../../img/skp_logo.png';
+import logoLG from '../../img/lg_logo.jpg';
 
 const Careers = () => {
   return (
     <>
       <div className="row">
         <div className="col-12 col-md-4 mt-2 text-center">
-          <img src={require('../../img/skp_logo.png')} alt="SK planet logo" style={{ width: '96px' }} />
+          <img src={logoSKP} alt="SK planet logo" style={{ width: '96px' }} />
         </div>
         <div className="col-12 col-md-8 mt-2">
           <ul>
@@ -25,7 +27,7 @@ const Careers = () => {
 
       <div className="row mt-5">
         <div className="col-12 col-md-4 mt-2 text-center">
-          <img src={require('../../img/lg_logo.jpg')} alt="LG logo" style={{ width: '96px' }} />
+          <img src={logoLG} alt="LG logo" style={{ width: '96px' }} />
         </div>
         <div className="col-12 col-md-8 mt-2">
           <ul>

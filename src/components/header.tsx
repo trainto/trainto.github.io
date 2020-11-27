@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './header.css';
+import iconReturn from '../img/header-ic-return.png';
 
 const command = 'cd .profile';
 
@@ -87,7 +88,7 @@ const Header = () => {
             id="btn-return"
             type="image"
             className={`align-middle ml-2 ${command.length === typings.length ? 'show' : ''}`}
-            src={require('../img/header-ic-return.png')}
+            src={iconReturn}
             alt="return"
             style={{ height: '18px' }}
             onClick={handleReturnClicked}

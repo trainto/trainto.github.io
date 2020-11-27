@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useScroll } from './common/custom-hooks';
+import githubImg from '../img/github.png';
 
 const CONTRIBUTIONS = [
   {
@@ -68,7 +69,7 @@ const Contribution = React.memo(() => {
           <ul className="mt-5">
             {CONTRIBUTIONS.map((cont, i) => (
               <li className="mt-3" key={i}>
-                <img src={require('../img/github.png')} alt="github" width="20" height="20" />
+                <img src={githubImg} alt="github" width="20" height="20" />
                 <span className="ml-2 mr-2">{cont.repo},</span>
                 <a href={cont.link} target="_blank" rel="noopener noreferrer">
                   {cont.text}
