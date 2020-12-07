@@ -6,6 +6,12 @@ import githubImg from '../img/github.png';
 const CONTRIBUTIONS = [
   {
     site: 'github',
+    repo: 'securingsincity/react-ace',
+    text: 'chore(package): add React 17 support',
+    link: 'https://github.com/securingsincity/react-ace/pull/967'
+  },
+  {
+    site: 'github',
     repo: 'facebook/create-react-app',
     text: 'chore: bump versions of typescript and some @types',
     link: 'https://github.com/facebook/create-react-app/pull/10141'
