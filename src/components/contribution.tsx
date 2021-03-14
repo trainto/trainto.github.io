@@ -6,6 +6,12 @@ import githubImg from '../img/github.png';
 const CONTRIBUTIONS = [
   {
     site: 'github',
+    repo: 'denoland/deno_website2',
+    text: 'fix: broken link in benchmarks',
+    link: 'https://github.com/denoland/deno_website2/pull/1707'
+  },
+  {
+    site: 'github',
     repo: 'securingsincity/react-ace',
     text: 'chore(package): add React 17 support',
     link: 'https://github.com/securingsincity/react-ace/pull/967'
