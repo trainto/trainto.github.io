@@ -72,9 +72,21 @@ const Header = () => {
           <div>Welcome to iam.trainto.me</div>
           <br />
 
-          <div className="text-truncate"> * Source: https://github.com/trainto/trainto.github.io</div>
-          <div className="text-truncate"> * Blog: &nbsp;&nbsp;https://trainto.me</div>
-          <div className="text-truncate"> * Email: &nbsp;trainto (at) gmail.com</div>
+          <div className="text-truncate">
+            {' '}
+            * Source:{' '}
+            <a href="https://github.com/trainto/trainto.github.io" target="_blank" rel="noopener noreferrer">
+              https://github.com/trainto/trainto.github.io
+            </a>
+          </div>
+          <div className="text-truncate">
+            {' '}
+            * Blog: &nbsp;&nbsp;<a href="https://trainto.me">https://trainto.me</a>
+          </div>
+          <div className="text-truncate">
+            {' '}
+            * Email: &nbsp;<a href="mailto:trainto@gmail.com">trainto (at) gmail.com</a>
+          </div>
           <br />
 
           <div className="text-truncate mt-3">Login: {time}</div>
