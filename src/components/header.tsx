@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './header.css';
 import iconReturn from '../img/header-ic-return.png';
 
+const STORAGE_KEY = 'last.login';
 const command = 'cd .profile';
 
 const Header = () => {
-  const [time, setTime] = useState('');
+  const [lastLogin, setLastLogin] = useState('');
   const [typings, setTypings] = useState('');
 
   useEffect(() => {
@@ -15,7 +16,12 @@ const Header = () => {
   }, [typings.length]);
 
   useEffect(() => {
-    setTime(new Date().toString());
+    const lastLogin = localStorage.getItem(STORAGE_KEY);
+    if (lastLogin) {
+      setLastLogin(lastLogin);
+    }
+
+    localStorage.setItem(STORAGE_KEY, new Date().toString());
   }, []);
 
   /*
@@ -89,8 +95,12 @@ const Header = () => {
           </div>
           <br />
 
-          <div className="text-truncate mt-3">Login: {time}</div>
-          <br />
+          {lastLogin !== '' && (
+            <>
+              <div className="text-truncate mt-3">Last login: {lastLogin}</div>
+              <br />
+            </>
+          )}
 
           <span className="directory-color font-bigger-2">~</span>
           <span className="point-color font-bigger-2">&raquo;</span>
