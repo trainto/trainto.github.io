@@ -7,6 +7,12 @@ const CONTRIBUTIONS = [
   {
     site: 'github',
     repo: 'denoland/deno_website2',
+    text: 'style: add border radius to .prism-code',
+    link: 'https://github.com/denoland/deno_website2/pull/1713'
+  },
+  {
+    site: 'github',
+    repo: 'denoland/deno_website2',
     text: 'fix: broken link in benchmarks',
     link: 'https://github.com/denoland/deno_website2/pull/1707'
   },
