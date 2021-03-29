@@ -5,14 +5,14 @@ import { useScroll } from './common/custom-hooks';
 const BLOG_HOST = 'https://trainto.me/';
 const LIST_COUNT_TO_SHOW = 10;
 
-interface IPost {
+type Post = {
   title: string;
   date: string;
   link: string;
-}
+};
 
 const Blog = () => {
-  const [posts, setPosts] = useState<IPost[]>([]);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   const { ref, onScreen } = useScroll<HTMLElement>();
 
@@ -34,7 +34,7 @@ const Blog = () => {
           const postArrAll = Array.from(el.getElementsByTagName('article'));
           const postArr = postArrAll.slice(0, LIST_COUNT_TO_SHOW);
 
-          const postsParsed: IPost[] = [];
+          const postsParsed: Post[] = [];
           postArr.forEach(post => {
             const title = (post.querySelector('header h3 a') as HTMLElement).innerText;
             const date = (post.querySelector('small') as HTMLElement).innerText;
