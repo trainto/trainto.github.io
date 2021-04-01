@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { scrollToId } from '../lib/utils';
 import './nav.css';
 
 const Nav = () => {
   const [isScrollOnTop, setIsScrollOnTop] = useState(true);
   const [collapsed, setCollapsed] = useState(true);
-
-  const nav = document.getElementById('nav-top');
-  const navHeight = nav ? nav.getBoundingClientRect().height : 0;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,18 +25,7 @@ const Nav = () => {
   const handleNavClicked = (id: string) => {
     setCollapsed(true); // close nav
 
-    const target = document.getElementById(id);
-    if (!target) {
-      return;
-    }
-
-    const targetTop = target.getBoundingClientRect().top;
-
-    window.scrollTo({
-      top: targetTop - navHeight + window.pageYOffset,
-      left: 0,
-      behavior: 'smooth'
-    });
+    scrollToId(id);
   };
 
   return (
