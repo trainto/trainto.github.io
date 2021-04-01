@@ -1,4 +1,3 @@
-import React from 'react';
 import imgRbdialog from '../../img/rbdialog.jpg';
 import imgCapstec from '../../img/capstec.jpg';
 import imgAirquality from '../../img/air-quality.jpg';

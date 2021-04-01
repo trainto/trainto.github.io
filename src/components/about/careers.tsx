@@ -1,4 +1,3 @@
-import React from 'react';
 import logoSKP from '../../img/skp_logo.png';
 import logoLG from '../../img/lg_logo.jpg';
 

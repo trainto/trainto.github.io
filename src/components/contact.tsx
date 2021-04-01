@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Contact = () => {
   return (
     <section className="py-5 scroll-area" id="contact" style={{ backgroundColor: '#f6f6f6' }}>

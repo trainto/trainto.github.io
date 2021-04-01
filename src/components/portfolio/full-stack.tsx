@@ -1,4 +1,3 @@
-import React from 'react';
 import imgTworld from '../../img/tworld.jpg';
 
 const FullStack = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useScroll } from './common/custom-hooks';
 
@@ -35,7 +35,7 @@ const Blog = () => {
           const postArr = postArrAll.slice(0, LIST_COUNT_TO_SHOW);
 
           const postsParsed: Post[] = [];
-          postArr.forEach(post => {
+          postArr.forEach((post) => {
             const title = (post.querySelector('header h3 a') as HTMLElement).innerText;
             const date = (post.querySelector('small') as HTMLElement).innerText;
             const link = (post.querySelector('header h3 a') as HTMLAnchorElement).href;
@@ -43,7 +43,7 @@ const Blog = () => {
             postsParsed.push({
               title,
               date: date.split('|')[0].trim(),
-              link: link.replace(/https?:\/\/.*?\//i, BLOG_HOST)
+              link: link.replace(/https?:\/\/.*?\//i, BLOG_HOST),
             });
           });
 
@@ -62,13 +62,13 @@ const Blog = () => {
   const h2AniProps = useSpring({
     transform: onScreen ? 'rotate(360deg)' : 'rotate(0deg)',
     opacity: onScreen ? 1 : 0,
-    from: { transform: 'rotate(0deg)' }
+    from: { transform: 'rotate(0deg)' },
   });
 
   const contentAniProps = useSpring({
     transform: onScreen ? 'translateY(0%)' : 'translateY(50%)',
     opacity: onScreen ? 1 : 0,
-    from: { transform: 'translateY(50%)' }
+    from: { transform: 'translateY(50%)' },
   });
 
   return (

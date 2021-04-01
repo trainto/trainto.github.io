@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import FullStack from './full-stack';
 import FrontEnd from './front-end';
 import Android from './android';
@@ -26,13 +26,13 @@ const Portfolio = () => {
   const h2AniProps = useSpring({
     config: { duration: 1000 },
     from: { opacity: 0 },
-    opacity: onScreen ? 1 : 0
+    opacity: onScreen ? 1 : 0,
   });
 
   const contentAniProps = useSpring({
     transform: onScreen ? 'translateY(0%)' : 'translateY(50%)',
     opacity: onScreen ? 1 : 0,
-    from: { transform: 'translateY(50%)' }
+    from: { transform: 'translateY(50%)' },
   });
 
   return (

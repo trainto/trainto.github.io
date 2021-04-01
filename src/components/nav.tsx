@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { scrollToId } from '../lib/utils';
 import './nav.css';
 

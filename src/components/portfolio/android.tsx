@@ -1,4 +1,3 @@
-import React from 'react';
 import imgFlo from '../../img/flo.jpg';
 import imgDatasoda from '../../img/datasoda.png';
 

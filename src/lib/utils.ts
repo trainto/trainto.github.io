@@ -12,7 +12,7 @@ export const scrollToId = (id: string) => {
   window.scrollTo({
     top: targetTop - navHeight + window.pageYOffset,
     left: 0,
-    behavior: 'smooth'
+    behavior: 'smooth',
   });
 
   return true;

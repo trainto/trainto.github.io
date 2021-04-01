@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Careers from './careers';
 import Education from './education';
 import Papers from './papers';
@@ -27,13 +27,13 @@ const About = () => {
   const h2AniProps = useSpring({
     opacity: onScreen ? 1 : 0,
     transform: onScreen ? 'translateX(0%)' : 'translateX(-50%)',
-    from: { opacity: 0, transform: 'translateX(-50%)' }
+    from: { opacity: 0, transform: 'translateX(-50%)' },
   });
 
   const imgAniProps = useSpring({
     transform: onScreen ? 'translateY(0%)' : 'translateY(200%)',
     opacity: onScreen ? 1 : 0,
-    from: { opacity: 0, transform: 'translateY(200%)' }
+    from: { opacity: 0, transform: 'translateY(200%)' },
   });
 
   const descAniProps = useSpring({
@@ -44,13 +44,13 @@ const About = () => {
     */
     transform: onScreen ? 'translateY(0%)' : 'translateY(50%)',
     opacity: onScreen ? 1 : 0,
-    from: { transform: 'translateY(50%)' }
+    from: { transform: 'translateY(50%)' },
   });
 
   const contentAniProps = useSpring({
     transform: onScreen ? 'translateY(0%)' : 'translateY(50%)',
     opacity: onScreen ? 1 : 0,
-    from: { transform: 'translateY(50%)' }
+    from: { transform: 'translateY(50%)' },
   });
 
   return (

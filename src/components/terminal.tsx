@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { processCommand } from '../lib/terminal-helper';
 import './terminal.css';
 
@@ -28,7 +28,7 @@ const Terminal = () => {
     if (contentRef.current) {
       contentRef.current.scrollTo({
         top: contentRef.current.scrollHeight,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   });
@@ -129,7 +129,7 @@ const Terminal = () => {
             <textarea
               className="terminal-input"
               rows={1}
-              onKeyPress={e => e.key === 'Enter' && handleCommand(e)}
+              onKeyPress={(e) => e.key === 'Enter' && handleCommand(e)}
               onInput={handleInputHeight}
               ref={inputRef}
             ></textarea>
