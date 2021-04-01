@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useScroll } from './common/custom-hooks';
 
@@ -11,7 +11,7 @@ type Post = {
   link: string;
 };
 
-const Blog = () => {
+const Blog = memo(({ title }: { title: string }) => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   const { ref, onScreen } = useScroll<HTMLElement>();
@@ -72,12 +72,12 @@ const Blog = () => {
   });
 
   return (
-    <section ref={ref} className="py-5 scroll-area" id="blog">
+    <section ref={ref} className="py-5 scroll-area" id={title}>
       <div className="container">
         <div className="text-center">
           <animated.div className="d-inline-block border-under" style={h2AniProps}>
             <h2 className="text-center font-weight-bold" id="h2-blog">
-              Blog
+              {title}
             </h2>
           </animated.div>
         </div>
@@ -103,6 +103,6 @@ const Blog = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Blog;

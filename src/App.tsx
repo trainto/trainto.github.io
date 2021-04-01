@@ -1,27 +1,17 @@
-import React from 'react';
+import smoothcroll from 'smoothscroll-polyfill';
+import store, { StoreContext } from './store';
+import Layout from './layout';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import smoothcroll from 'smoothscroll-polyfill';
-import Nav from './components/nav';
-import Header from './components/header';
-import About from './components/about';
-import Portfolio from './components/portfolio';
-import Blog from './components/blog';
-import Footer from './components/footer';
-import Contribution from './components/contribution';
 
 const App: React.FC = () => {
   smoothcroll.polyfill();
 
   return (
     <div className="App">
-      <Nav />
-      <Header />
-      <About />
-      <Portfolio />
-      <Contribution />
-      <Blog />
-      <Footer />
+      <StoreContext.Provider value={store}>
+        <Layout />
+      </StoreContext.Provider>
     </div>
   );
 };

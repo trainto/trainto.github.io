@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { processCommand } from '../lib/terminal-helper';
+import { useStore } from '../store';
 import './terminal.css';
 
 const STORAGE_KEY = 'last.login';
@@ -10,6 +11,8 @@ const Terminal = () => {
 
   const contentRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  const store = useStore();
 
   useEffect(() => {
     const lastLogin = localStorage.getItem(STORAGE_KEY);
@@ -55,7 +58,7 @@ const Terminal = () => {
 
   const handleCommand = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     e.preventDefault();
-    const result = processCommand(e.currentTarget.value);
+    const result = processCommand(e.currentTarget.value, store);
     setLines([...lines, { command: e.currentTarget.value, result }]);
 
     e.currentTarget.value = '';

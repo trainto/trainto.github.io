@@ -54,7 +54,7 @@ const CONTRIBUTIONS = [
   },
 ];
 
-const Contribution = memo(() => {
+const Contribution = memo(({ title }: { title: string }) => {
   const { ref, onScreen } = useScroll<HTMLElement>();
 
   const h2AniProps = useSpring({
@@ -70,12 +70,12 @@ const Contribution = memo(() => {
   });
 
   return (
-    <section ref={ref} className="py-5 scroll-area" id="contribution">
+    <section ref={ref} className="py-5 scroll-area" id={title}>
       <div className="container">
         <div className="text-center">
           <animated.div className="d-inline-block border-under" style={h2AniProps}>
             <h2 className="text-center font-weight-bold" id="h2-blog">
-              Contribution
+              {title}
             </h2>
           </animated.div>
           <div className="mt-3">

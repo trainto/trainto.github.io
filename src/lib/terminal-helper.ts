@@ -1,11 +1,7 @@
+import { StoreImpl } from '../store';
 import { scrollToId } from './utils';
 
-const files = ['about', 'blog', 'contribution', 'portfolio', 'README'];
-const readmeFiles = ['README'];
-// const readme = 'Available command list:<br />ls, cd, cat, pwd, cp, rm';
-const readme = 'Available command list:<br />ls, cd, cat, pwd';
-
-export const processCommand = (command: string) => {
+export const processCommand = (command: string, store: StoreImpl) => {
   if (command.trim() === '') {
     return '';
   }
@@ -17,7 +13,7 @@ export const processCommand = (command: string) => {
         let succeed = '';
         let failed = '';
         for (let i = 1; i < tokens.length; i += 1) {
-          if (files.includes(tokens[i])) {
+          if (store.files.includes(tokens[i])) {
             if (succeed !== '') {
               succeed += '  ';
             }
@@ -44,7 +40,7 @@ export const processCommand = (command: string) => {
         return memo;
       }
 
-      return files.reduce((memo, file) => memo + file + '  ', '');
+      return store.files.reduce((memo, file) => memo + file + '  ', '');
     case 'cd':
       if (tokens.length > 1) {
         if (['..', '/'].includes(tokens[1])) {
@@ -55,7 +51,7 @@ export const processCommand = (command: string) => {
           return '';
         }
 
-        if (files.includes(tokens[1])) {
+        if (store.files.includes(tokens[1])) {
           return `cd: not a directory: ${tokens[1]}`;
         } else {
           return `cd: no such file or directory: ${tokens[1]}`;
@@ -72,8 +68,8 @@ export const processCommand = (command: string) => {
         return 'cat: can take only one operand';
       }
 
-      if (readmeFiles.includes(tokens[1])) {
-        return readme;
+      if (store.normalFiles.includes(tokens[1])) {
+        return store.getFileContent(tokens[1]);
       }
 
       if (scrollToId(tokens[1])) {
@@ -91,8 +87,24 @@ export const processCommand = (command: string) => {
     //   }
 
     //   return '';
-    // case 'rm':
-    //   return '';
+    case 'rm':
+      if (tokens.length === 1) {
+        return 'rm: missing operand';
+      }
+
+      let ret = '';
+      for (let i = 1; i < tokens.length; i += 1) {
+        if (store.files.includes(tokens[i])) {
+          store.deleteFile(tokens[i]);
+        } else {
+          if (ret !== '') {
+            ret += '<br />';
+          }
+          ret += `rm: cannot remove ${tokens[i]}: No suc file or directory`;
+        }
+      }
+
+      return ret;
     default:
       return `zsh: command not found: ${tokens[0]}`;
   }

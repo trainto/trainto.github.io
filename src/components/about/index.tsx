@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import Careers from './careers';
 import Education from './education';
 import Papers from './papers';
@@ -19,7 +19,7 @@ const renderSwitcher = (active: string) => {
   }
 };
 
-const About = () => {
+const About = memo(({ title }: { title: string }) => {
   const [active, setActive] = useState('Careers');
 
   const { ref, onScreen } = useScroll<HTMLElement>();
@@ -54,12 +54,12 @@ const About = () => {
   });
 
   return (
-    <section ref={ref} className="py-5 scroll-area" id="about">
+    <section ref={ref} className="py-5 scroll-area" id={title}>
       <div className="container">
         <div className="text-center">
           <animated.div className="d-inline-block border-under" style={h2AniProps}>
             <h2 className="text-center font-weight-bold" id="h2-about">
-              About
+              {title}
             </h2>
           </animated.div>
 
@@ -120,6 +120,6 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
 
 export default About;

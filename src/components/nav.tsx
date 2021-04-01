@@ -50,7 +50,7 @@ const Nav = () => {
       <div className={`navbar-collapse collapse ${collapsed ? '' : 'show'}`}>
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('about')}>
+            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('About')}>
               About
             </div>
           </li>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import FullStack from './full-stack';
 import FrontEnd from './front-end';
 import Android from './android';
@@ -18,7 +18,7 @@ const renderSwitcher = (active: string) => {
   }
 };
 
-const Portfolio = () => {
+const Portfolio = memo(({ title }: { title: string }) => {
   const [active, setActive] = useState('Full-Stack');
 
   const { ref, onScreen } = useScroll<HTMLElement>();
@@ -36,12 +36,12 @@ const Portfolio = () => {
   });
 
   return (
-    <section ref={ref} className="py-5 bg-light-gray scroll-area" id="portfolio">
+    <section ref={ref} className="py-5 bg-light-gray scroll-area" id={title}>
       <div className="container">
         <div className="text-center">
           <animated.div className="d-inline-block border-under" style={h2AniProps}>
             <h2 className="text-center font-weight-bold" id="h2-portfolio">
-              Portfolio
+              {title}
             </h2>
           </animated.div>
         </div>
@@ -81,6 +81,6 @@ const Portfolio = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Portfolio;
