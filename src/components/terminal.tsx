@@ -100,7 +100,7 @@ const Terminal = () => {
           </div>
           <div className="text-truncate">
             {' '}
-            * Email: &nbsp;<a href="mailto:trainto@gmail.com">trainto (at) gmail.com</a>
+            * Email: &nbsp;<a href="mailto:you@heyjoon.dev">you (at) heyjoon.dev</a>
           </div>
           <br />
 
