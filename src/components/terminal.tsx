@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { processCommand } from '../lib/terminal-helper';
-import { useStore } from '../store';
+import GlobalStore from '../store/global-store';
 import './terminal.css';
 
 const STORAGE_KEY = 'last.login';
@@ -12,7 +12,7 @@ const Terminal = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  const store = useStore();
+  const store = GlobalStore.useStore();
 
   useEffect(() => {
     const lastLogin = localStorage.getItem(STORAGE_KEY);

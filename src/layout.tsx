@@ -5,11 +5,10 @@ import Portfolio from './components/portfolio';
 import Blog from './components/blog';
 import Footer from './components/footer';
 import Contribution from './components/contribution';
-import { observer } from 'mobx-react-lite';
-import { useStore } from './store';
+import GlobalStore from './store/global-store';
 
-const Layout = observer(() => {
-  const store = useStore();
+const Layout = () => {
+  const store = GlobalStore.useStore();
 
   return (
     <>
@@ -43,6 +42,6 @@ const Layout = observer(() => {
       <Footer />
     </>
   );
-});
+};
 
 export default Layout;

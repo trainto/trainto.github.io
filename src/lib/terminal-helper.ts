@@ -1,7 +1,7 @@
-import { StoreImpl } from '../store';
+import GlobalStore from '../store/global-store';
 import { scrollToId } from './utils';
 
-export const processCommand = (command: string, store: StoreImpl) => {
+export const processCommand = (command: string, store: ReturnType<typeof GlobalStore.useStore>) => {
   if (command.trim() === '') {
     return '';
   }
@@ -13,7 +13,7 @@ export const processCommand = (command: string, store: StoreImpl) => {
         let succeed = '';
         let failed = '';
         for (let i = 1; i < tokens.length; i += 1) {
-          if (store.files.includes(tokens[i])) {
+          if (store.getFiles().includes(tokens[i])) {
             if (succeed !== '') {
               succeed += '  ';
             }
@@ -40,7 +40,7 @@ export const processCommand = (command: string, store: StoreImpl) => {
         return memo;
       }
 
-      return store.files.reduce((memo, file) => memo + file + '  ', '');
+      return store.getFiles().reduce((memo, file) => memo + file + '  ', '');
     case 'cd':
       if (tokens.length > 1) {
         if (['..', '/'].includes(tokens[1])) {
@@ -51,7 +51,7 @@ export const processCommand = (command: string, store: StoreImpl) => {
           return '';
         }
 
-        if (store.files.includes(tokens[1])) {
+        if (store.getFiles().includes(tokens[1])) {
           return `cd: not a directory: ${tokens[1]}`;
         } else {
           return `cd: no such file or directory: ${tokens[1]}`;
@@ -68,7 +68,7 @@ export const processCommand = (command: string, store: StoreImpl) => {
         return 'cat: can take only one operand';
       }
 
-      if (store.normalFiles.includes(tokens[1])) {
+      if (store.getNormalFiles().includes(tokens[1])) {
         return store.getFileContent(tokens[1]);
       }
 
@@ -94,7 +94,7 @@ export const processCommand = (command: string, store: StoreImpl) => {
 
       let ret = '';
       for (let i = 1; i < tokens.length; i += 1) {
-        if (store.files.includes(tokens[i])) {
+        if (store.getFiles().includes(tokens[i])) {
           store.deleteFile(tokens[i]);
         } else {
           if (ret !== '') {
