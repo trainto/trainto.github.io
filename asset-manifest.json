@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.d5cc11db.chunk.css",
-    "main.js": "/static/js/main.1ac984b8.chunk.js",
+    "main.js": "/static/js/main.8b2960db.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.dd770dcf.js",
     "static/css/2.0d3b4d9f.chunk.css": "/static/css/2.0d3b4d9f.chunk.css",
-    "static/js/2.5ab0383a.chunk.js": "/static/js/2.5ab0383a.chunk.js",
+    "static/js/2.d8e3a686.chunk.js": "/static/js/2.d8e3a686.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.5ab0383a.chunk.js.LICENSE.txt": "/static/js/2.5ab0383a.chunk.js.LICENSE.txt",
+    "static/js/2.d8e3a686.chunk.js.LICENSE.txt": "/static/js/2.d8e3a686.chunk.js.LICENSE.txt",
     "static/media/air-quality.6b3b8331.jpg": "/static/media/air-quality.6b3b8331.jpg",
     "static/media/capstec.2d7a0586.jpg": "/static/media/capstec.2d7a0586.jpg",
     "static/media/datasoda.8dee0694.png": "/static/media/datasoda.8dee0694.png",
@@ -19,8 +19,8 @@
   "entrypoints": [
     "static/js/runtime-main.dd770dcf.js",
     "static/css/2.0d3b4d9f.chunk.css",
-    "static/js/2.5ab0383a.chunk.js",
+    "static/js/2.d8e3a686.chunk.js",
     "static/css/main.d5cc11db.chunk.css",
-    "static/js/main.1ac984b8.chunk.js"
+    "static/js/main.8b2960db.chunk.js"
   ]
 }
