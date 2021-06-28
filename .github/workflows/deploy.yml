@@ -3,7 +3,7 @@ name: Deploy iam.trainto.me
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
   deploy:
