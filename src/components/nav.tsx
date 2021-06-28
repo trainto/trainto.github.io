@@ -30,7 +30,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow ${isScrollOnTop ? '' : 'show'}`}
+      className={`navbar navbar-expand-lg fixed-top navbar-dark bg-nav shadow ${isScrollOnTop ? '' : 'show'}`}
       id="nav-top"
     >
       <div

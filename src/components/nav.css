@@ -7,6 +7,10 @@ nav.show {
   visibility: visible;
 }
 
+nav.bg-nav {
+  background-color: #343a40ee!important;
+}
+
 .sns {
   height: 24px;
 }
