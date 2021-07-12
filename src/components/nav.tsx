@@ -55,17 +55,22 @@ const Nav = () => {
             </div>
           </li>
           <li className="nav-item">
-            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('portfolio')}>
+            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('Portfolio')}>
               Portfolio
             </div>
           </li>
           <li className="nav-item">
-            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('contribution')}>
+            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('Side-Project')}>
+              Side Project
+            </div>
+          </li>
+          <li className="nav-item">
+            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('Contribution')}>
               Contribution
             </div>
           </li>
           <li className="nav-item">
-            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('blog')}>
+            <div className="nav-link cursor-pointer" onClick={() => handleNavClicked('Blog')}>
               Blog
             </div>
           </li>

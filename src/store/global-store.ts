@@ -5,6 +5,7 @@ const useGlobal = () => {
   const [sections] = useMutableState([
     { title: 'About', from: 'about' },
     { title: 'Portfolio', from: 'portfolio' },
+    { title: 'Side-Project', from: 'side-project' },
     { title: 'Contribution', from: 'contribution' },
     { title: 'Blog', from: 'blog' },
   ]);
