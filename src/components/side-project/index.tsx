@@ -35,7 +35,7 @@ const SideProject = memo(({ title }: { title: string }) => {
         <div className="text-center">
           <animated.div className="d-inline-block border-under" style={h2AniProps}>
             <h2 className="text-center font-weight-bold" id="h2-portfolio">
-              {title}
+              Side Project
             </h2>
           </animated.div>
         </div>
