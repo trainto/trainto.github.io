@@ -28,7 +28,7 @@ const Footer = () => {
             </a>
           </div>
           <div>
-            Hakjoon Sim&nbsp;<span className="highlite-color">&copy;2020</span>
+            Hakjoon Sim&nbsp;<span className="highlite-color">&copy;{new Date().getFullYear()}</span>
           </div>
         </div>
       </div>
