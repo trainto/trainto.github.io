@@ -2,7 +2,7 @@ import { memo, useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useScroll } from './common/custom-hooks';
 
-const BLOG_HOST = 'https://trainto.me/';
+const BLOG_HOST = 'https://heyjoon.dev/';
 const LIST_COUNT_TO_SHOW = 10;
 
 type Post = {

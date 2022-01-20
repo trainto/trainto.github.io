@@ -1,4 +1,4 @@
-name: Deploy iam.trainto.me
+name: Deploy you.heyjoon.dev
 
 on:
   push:

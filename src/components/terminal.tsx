@@ -84,7 +84,7 @@ const Terminal = () => {
           </h1>
         </div>
         <div className="mt-4 ml-3">
-          <div>Welcome to iam.trainto.me</div>
+          <div>Welcome to you.heyjoon.dev</div>
           <br />
 
           <div className="text-truncate">
@@ -96,7 +96,7 @@ const Terminal = () => {
           </div>
           <div className="text-truncate">
             {' '}
-            * Blog: &nbsp;&nbsp;<a href="https://trainto.me">https://trainto.me</a>
+            * Blog: &nbsp;&nbsp;<a href="https://heyjoon.dev">https://heyjoon.dev</a>
           </div>
           <div className="text-truncate">
             {' '}
