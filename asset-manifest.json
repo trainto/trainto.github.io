@@ -1,27 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.53320495.chunk.css",
-    "main.js": "/static/js/main.9da2828b.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.06b5035f.js",
-    "static/css/2.0d3b4d9f.chunk.css": "/static/css/2.0d3b4d9f.chunk.css",
-    "static/js/2.ec37e089.chunk.js": "/static/js/2.ec37e089.chunk.js",
-    "index.html": "/index.html",
-    "static/js/2.ec37e089.chunk.js.LICENSE.txt": "/static/js/2.ec37e089.chunk.js.LICENSE.txt",
-    "static/media/air-quality.6b3b8331.jpg": "/static/media/air-quality.6b3b8331.jpg",
-    "static/media/capstec.2d7a0586.jpg": "/static/media/capstec.2d7a0586.jpg",
-    "static/media/crypexit.ee538596.png": "/static/media/crypexit.ee538596.png",
-    "static/media/datasoda.8dee0694.png": "/static/media/datasoda.8dee0694.png",
-    "static/media/flo.4ea333f9.jpg": "/static/media/flo.4ea333f9.jpg",
-    "static/media/joon.7862a21d.jpg": "/static/media/joon.7862a21d.jpg",
-    "static/media/lg_logo.3cd90d16.jpg": "/static/media/lg_logo.3cd90d16.jpg",
-    "static/media/rbdialog.a8e62fa8.jpg": "/static/media/rbdialog.a8e62fa8.jpg",
-    "static/media/tworld.489e9eb4.jpg": "/static/media/tworld.489e9eb4.jpg"
+    "main.css": "/static/css/main.3fe79b9d.css",
+    "main.js": "/static/js/main.fc8355f4.js",
+    "static/media/air-quality.jpg": "/static/media/air-quality.6b3b8331a319fccaed38.jpg",
+    "static/media/tworld.jpg": "/static/media/tworld.489e9eb4e2115782ceb9.jpg",
+    "static/media/crypexit.png": "/static/media/crypexit.ee5385960ecfcf44486b.png",
+    "static/media/flo.jpg": "/static/media/flo.4ea333f95db7f4c946cd.jpg",
+    "static/media/capstec.jpg": "/static/media/capstec.2d7a058697ef65fcf285.jpg",
+    "static/media/datasoda.png": "/static/media/datasoda.8dee0694f70c5ad7d07e.png",
+    "static/media/lg_logo.jpg": "/static/media/lg_logo.3cd90d16cfbd601bd48a.jpg",
+    "static/media/joon.jpg": "/static/media/joon.7862a21ddaa0c17d1ef4.jpg",
+    "static/media/rbdialog.jpg": "/static/media/rbdialog.a8e62fa8557cead182d3.jpg",
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/js/runtime-main.06b5035f.js",
-    "static/css/2.0d3b4d9f.chunk.css",
-    "static/js/2.ec37e089.chunk.js",
-    "static/css/main.53320495.chunk.css",
-    "static/js/main.9da2828b.chunk.js"
+    "static/css/main.3fe79b9d.css",
+    "static/js/main.fc8355f4.js"
   ]
 }
