@@ -6,6 +6,12 @@ import { memo } from 'react';
 const CONTRIBUTIONS = [
   {
     site: 'github',
+    repo: 'transmission/transmission',
+    text: 'fix(web): some style edited',
+    link: 'https://github.com/transmission/transmission/pull/1529',
+  },
+  {
+    site: 'github',
     repo: 'denoland/deno_website2',
     text: 'style: add border radius to .prism-code',
     link: 'https://github.com/denoland/deno_website2/pull/1713',
