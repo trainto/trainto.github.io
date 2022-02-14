@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3fe79b9d.css",
-    "main.js": "/static/js/main.fc8355f4.js",
+    "main.js": "/static/js/main.b335d270.js",
     "static/media/air-quality.jpg": "/static/media/air-quality.6b3b8331a319fccaed38.jpg",
     "static/media/tworld.jpg": "/static/media/tworld.489e9eb4e2115782ceb9.jpg",
     "static/media/crypexit.png": "/static/media/crypexit.ee5385960ecfcf44486b.png",
@@ -15,6 +15,6 @@
   },
   "entrypoints": [
     "static/css/main.3fe79b9d.css",
-    "static/js/main.fc8355f4.js"
+    "static/js/main.b335d270.js"
   ]
 }
