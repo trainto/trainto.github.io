@@ -72,7 +72,7 @@ const Terminal = () => {
           <span className="terminal-button yellow ml-1" />
           <span className="terminal-button green ml-1" />
         </div>
-        <div className="terminal-title text-center">trainto: ~ (zsh)</div>
+        <div className="terminal-title text-center">heyjoon: ~ (zsh)</div>
       </div>
 
       <div className="terminal-content" ref={contentRef} onClick={() => inputRef.current?.focus()}>

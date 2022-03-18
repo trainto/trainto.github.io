@@ -78,7 +78,7 @@ export const processCommand = (command: string, store: ReturnType<typeof GlobalS
 
       return `cat: ${tokens[1]}: No such file or directory`;
     case 'pwd':
-      return '/home/trainto';
+      return '/home/heyjoon';
     // case 'cp':
     //   if (tokens.length === 1) {
     //     return 'cp: missing file operand';
