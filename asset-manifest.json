@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.3fe79b9d.css",
-    "main.js": "/static/js/main.6ee4ffe0.js",
+    "main.js": "/static/js/main.412362e5.js",
     "static/media/air-quality.jpg": "/static/media/air-quality.6b3b8331a319fccaed38.jpg",
     "static/media/tworld.jpg": "/static/media/tworld.489e9eb4e2115782ceb9.jpg",
-    "static/media/crypexit.png": "/static/media/crypexit.ee5385960ecfcf44486b.png",
     "static/media/flo.jpg": "/static/media/flo.4ea333f95db7f4c946cd.jpg",
     "static/media/capstec.jpg": "/static/media/capstec.2d7a058697ef65fcf285.jpg",
     "static/media/datasoda.png": "/static/media/datasoda.8dee0694f70c5ad7d07e.png",
@@ -15,6 +14,6 @@
   },
   "entrypoints": [
     "static/css/main.3fe79b9d.css",
-    "static/js/main.6ee4ffe0.js"
+    "static/js/main.412362e5.js"
   ]
 }
