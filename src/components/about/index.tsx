@@ -54,7 +54,7 @@ const About = memo(({ title }: { title: string }) => {
   });
 
   return (
-    <section ref={ref} className="py-5 bg-light-gray scroll-area" id={title}>
+    <section ref={ref} className="py-5 scroll-area" id={title}>
       <div className="container">
         <div className="text-center">
           <animated.div className="d-inline-block border-under" style={h2AniProps}>
