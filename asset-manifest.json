@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3fe79b9d.css",
-    "main.js": "/static/js/main.a4e33e35.js",
+    "main.css": "/static/css/main.85a9bb69.css",
+    "main.js": "/static/js/main.1cc765fe.js",
     "static/media/air-quality.jpg": "/static/media/air-quality.6b3b8331a319fccaed38.jpg",
     "static/media/tworld.jpg": "/static/media/tworld.489e9eb4e2115782ceb9.jpg",
     "static/media/flo.jpg": "/static/media/flo.4ea333f95db7f4c946cd.jpg",
@@ -13,7 +13,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.3fe79b9d.css",
-    "static/js/main.a4e33e35.js"
+    "static/css/main.85a9bb69.css",
+    "static/js/main.1cc765fe.js"
   ]
 }
