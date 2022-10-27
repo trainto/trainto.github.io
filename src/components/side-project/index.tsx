@@ -20,7 +20,7 @@ const SideProject = memo(({ title }: { title: string }) => {
     from: { transform: 'translateY(50%)' },
   });
 
-  const renderSwitcher = useCallback((active) => {
+  const renderSwitcher = useCallback((active: string) => {
     switch (active) {
       case 'CrypExit':
         return <CrypExit />;
