@@ -13,6 +13,7 @@
   "rules": {
     "curly": "warn",
     "no-console": "warn",
-    "semi": "error"
+    "semi": "error",
+    "@typescript-eslint/lines-between-class-members": "off"
   }
 }

@@ -1,9 +1,14 @@
+import Layout from './components/layout';
 import './style.css';
 
 const appElem = document.querySelector<HTMLDivElement>('#app');
 
 if (appElem) {
-  appElem.innerHTML = `
-    <h1>Vanilla</h1>
-  `;
+  const layout = new Layout();
+  window.requestAnimationFrame(() => {
+    const newTarget = appElem.cloneNode(true);
+    newTarget.textContent = '';
+    newTarget.appendChild(layout.component);
+    appElem.replaceWith(newTarget);
+  });
 }
